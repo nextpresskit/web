@@ -111,16 +111,6 @@ export const MainFooter = () => {
 					<p className="text-sm text-muted-foreground">
 						© {year} NextPress. All rights reserved.
 					</p>
-					<Button
-						type="button"
-						variant="outline"
-						size="sm"
-						className="w-fit gap-1.5"
-						onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-					>
-						<ArrowUp className="size-3.5" aria-hidden />
-						Back to top
-					</Button>
 				</div>
 			</div>
 		</footer>

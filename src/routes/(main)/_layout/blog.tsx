@@ -80,6 +80,10 @@ function paginationRange(
 	return out;
 }
 
+function scrollPaginationToTop() {
+	window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
 function tagCounts(articles: Article[]): [string, number][] {
 	const map = new Map<string, number>();
 	for (const a of articles) {
@@ -271,6 +275,7 @@ function BlogPage() {
 											e.preventDefault();
 											if (currentPage > 1) {
 												setPage((p) => p - 1);
+												scrollPaginationToTop();
 											}
 										}}
 									/>
@@ -294,7 +299,10 @@ function BlogPage() {
 													isActive={item === currentPage}
 													onClick={(e) => {
 														e.preventDefault();
-														setPage(item);
+														if (item !== currentPage) {
+															setPage(item);
+															scrollPaginationToTop();
+														}
 													}}
 												>
 													{item}
@@ -315,6 +323,7 @@ function BlogPage() {
 											e.preventDefault();
 											if (currentPage < totalPages) {
 												setPage((p) => p + 1);
+												scrollPaginationToTop();
 											}
 										}}
 									/>
