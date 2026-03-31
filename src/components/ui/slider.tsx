@@ -21,15 +21,25 @@ function Slider({
 		[value, defaultValue, min, max],
 	);
 
+	const thumbGroupId = React.useId();
+	const thumbKeys = React.useMemo(
+		() =>
+			Array.from(
+				{ length: _values.length },
+				(_, ordinal) => `${thumbGroupId}:${ordinal}`,
+			),
+		[_values.length, thumbGroupId],
+	);
+
 	return (
 		<SliderPrimitive.Root
 			data-slot="slider"
-			defaultValue={defaultValue}
-			value={value}
+			{...(defaultValue !== undefined ? { defaultValue } : {})}
+			{...(value !== undefined ? { value } : {})}
 			min={min}
 			max={max}
 			className={cn(
-				"relative flex w-full touch-none items-center select-none data-[disabled]:opacity-50 data-[orientation=vertical]:h-full data-[orientation=vertical]:min-h-44 data-[orientation=vertical]:w-auto data-[orientation=vertical]:flex-col",
+				"relative flex w-full touch-none items-center select-none data-disabled:opacity-50 data-[orientation=vertical]:h-full data-[orientation=vertical]:min-h-44 data-[orientation=vertical]:w-auto data-[orientation=vertical]:flex-col",
 				className,
 			)}
 			{...props}
@@ -47,10 +57,10 @@ function Slider({
 					)}
 				/>
 			</SliderPrimitive.Track>
-			{Array.from({ length: _values.length }, (_, index) => (
+			{thumbKeys.map((thumbKey) => (
 				<SliderPrimitive.Thumb
 					data-slot="slider-thumb"
-					key={index}
+					key={thumbKey}
 					className="block size-4 shrink-0 rounded-full border border-primary bg-white shadow-sm ring-ring/50 transition-[color,box-shadow] hover:ring-4 focus-visible:ring-4 focus-visible:outline-hidden disabled:pointer-events-none disabled:opacity-50"
 				/>
 			))}
