@@ -14,7 +14,7 @@ import { Checkbox } from "#/components/ui/checkbox";
 import { Input } from "#/components/ui/input";
 import { Label } from "#/components/ui/label";
 
-export const Route = createFileRoute("/(admin)/admin")({
+export const Route = createFileRoute("/admin/")({
 	component: AdminPage,
 });
 
@@ -46,7 +46,7 @@ function AdminPage() {
 						<form
 							className="flex flex-col gap-6"
 							onSubmit={(e) => {
-								e.preventDefault();
+								e.preventDefault()
 							}}
 						>
 							<div className="grid gap-2">
@@ -93,7 +93,7 @@ function AdminPage() {
 						<form
 							className="flex flex-col gap-6"
 							onSubmit={(e) => {
-								e.preventDefault();
+								e.preventDefault()
 							}}
 						>
 							<div className="grid gap-2">
@@ -130,5 +130,5 @@ function AdminPage() {
 				</CardFooter>
 			</Card>
 		</div>
-	);
+	)
 }

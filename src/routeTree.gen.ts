@@ -9,30 +9,48 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as AdminIndexRouteImport } from './routes/admin/index'
+import { Route as AdminLayoutRouteImport } from './routes/admin/_layout'
 import { Route as mainLayoutRouteImport } from './routes/(main)/_layout'
-import { Route as adminAdminRouteImport } from './routes/(admin)/admin'
-import { Route as adminLayoutRouteImport } from './routes/(admin)/_layout'
 import { Route as mainLayoutIndexRouteImport } from './routes/(main)/_layout/index'
+import { Route as AdminLayoutUsersRouteImport } from './routes/admin/_layout/users'
+import { Route as AdminLayoutDashboardRouteImport } from './routes/admin/_layout/dashboard'
+import { Route as mainLayoutContactsRouteImport } from './routes/(main)/_layout/contacts'
 import { Route as mainLayoutBlogRouteImport } from './routes/(main)/_layout/blog'
 import { Route as mainLayoutAboutRouteImport } from './routes/(main)/_layout/about'
-import { Route as adminLayoutDashboardRouteImport } from './routes/(admin)/_layout/dashboard'
 
-const mainLayoutRoute = mainLayoutRouteImport.update({
-  id: '/(main)/_layout',
+const AdminIndexRoute = AdminIndexRouteImport.update({
+  id: '/admin/',
+  path: '/admin/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const adminAdminRoute = adminAdminRouteImport.update({
-  id: '/(admin)/admin',
+const AdminLayoutRoute = AdminLayoutRouteImport.update({
+  id: '/admin/_layout',
   path: '/admin',
   getParentRoute: () => rootRouteImport,
 } as any)
-const adminLayoutRoute = adminLayoutRouteImport.update({
-  id: '/(admin)/_layout',
+const mainLayoutRoute = mainLayoutRouteImport.update({
+  id: '/(main)/_layout',
   getParentRoute: () => rootRouteImport,
 } as any)
 const mainLayoutIndexRoute = mainLayoutIndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => mainLayoutRoute,
+} as any)
+const AdminLayoutUsersRoute = AdminLayoutUsersRouteImport.update({
+  id: '/users',
+  path: '/users',
+  getParentRoute: () => AdminLayoutRoute,
+} as any)
+const AdminLayoutDashboardRoute = AdminLayoutDashboardRouteImport.update({
+  id: '/dashboard',
+  path: '/dashboard',
+  getParentRoute: () => AdminLayoutRoute,
+} as any)
+const mainLayoutContactsRoute = mainLayoutContactsRouteImport.update({
+  id: '/contacts',
+  path: '/contacts',
   getParentRoute: () => mainLayoutRoute,
 } as any)
 const mainLayoutBlogRoute = mainLayoutBlogRouteImport.update({
@@ -45,60 +63,93 @@ const mainLayoutAboutRoute = mainLayoutAboutRouteImport.update({
   path: '/about',
   getParentRoute: () => mainLayoutRoute,
 } as any)
-const adminLayoutDashboardRoute = adminLayoutDashboardRouteImport.update({
-  id: '/dashboard',
-  path: '/dashboard',
-  getParentRoute: () => adminLayoutRoute,
-} as any)
 
 export interface FileRoutesByFullPath {
-  '/admin': typeof adminAdminRoute
-  '/dashboard': typeof adminLayoutDashboardRoute
+  '/admin': typeof AdminLayoutRouteWithChildren
+  '/admin/': typeof AdminIndexRoute
   '/about': typeof mainLayoutAboutRoute
   '/blog': typeof mainLayoutBlogRoute
+  '/contacts': typeof mainLayoutContactsRoute
+  '/admin/dashboard': typeof AdminLayoutDashboardRoute
+  '/admin/users': typeof AdminLayoutUsersRoute
   '/': typeof mainLayoutIndexRoute
 }
 export interface FileRoutesByTo {
-  '/admin': typeof adminAdminRoute
-  '/dashboard': typeof adminLayoutDashboardRoute
+  '/admin': typeof AdminIndexRoute
   '/about': typeof mainLayoutAboutRoute
   '/blog': typeof mainLayoutBlogRoute
+  '/contacts': typeof mainLayoutContactsRoute
+  '/admin/dashboard': typeof AdminLayoutDashboardRoute
+  '/admin/users': typeof AdminLayoutUsersRoute
   '/': typeof mainLayoutIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
-  '/(admin)/_layout': typeof adminLayoutRouteWithChildren
-  '/(admin)/admin': typeof adminAdminRoute
   '/(main)/_layout': typeof mainLayoutRouteWithChildren
-  '/(admin)/_layout/dashboard': typeof adminLayoutDashboardRoute
+  '/admin/_layout': typeof AdminLayoutRouteWithChildren
+  '/admin/': typeof AdminIndexRoute
   '/(main)/_layout/about': typeof mainLayoutAboutRoute
   '/(main)/_layout/blog': typeof mainLayoutBlogRoute
+  '/(main)/_layout/contacts': typeof mainLayoutContactsRoute
+  '/admin/_layout/dashboard': typeof AdminLayoutDashboardRoute
+  '/admin/_layout/users': typeof AdminLayoutUsersRoute
   '/(main)/_layout/': typeof mainLayoutIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/admin' | '/dashboard' | '/about' | '/blog' | '/'
+  fullPaths:
+    | '/admin'
+    | '/admin/'
+    | '/about'
+    | '/blog'
+    | '/contacts'
+    | '/admin/dashboard'
+    | '/admin/users'
+    | '/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/admin' | '/dashboard' | '/about' | '/blog' | '/'
+  to:
+    | '/admin'
+    | '/about'
+    | '/blog'
+    | '/contacts'
+    | '/admin/dashboard'
+    | '/admin/users'
+    | '/'
   id:
     | '__root__'
-    | '/(admin)/_layout'
-    | '/(admin)/admin'
     | '/(main)/_layout'
-    | '/(admin)/_layout/dashboard'
+    | '/admin/_layout'
+    | '/admin/'
     | '/(main)/_layout/about'
     | '/(main)/_layout/blog'
+    | '/(main)/_layout/contacts'
+    | '/admin/_layout/dashboard'
+    | '/admin/_layout/users'
     | '/(main)/_layout/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
-  adminLayoutRoute: typeof adminLayoutRouteWithChildren
-  adminAdminRoute: typeof adminAdminRoute
   mainLayoutRoute: typeof mainLayoutRouteWithChildren
+  AdminLayoutRoute: typeof AdminLayoutRouteWithChildren
+  AdminIndexRoute: typeof AdminIndexRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/admin/': {
+      id: '/admin/'
+      path: '/admin'
+      fullPath: '/admin/'
+      preLoaderRoute: typeof AdminIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/_layout': {
+      id: '/admin/_layout'
+      path: '/admin'
+      fullPath: '/admin'
+      preLoaderRoute: typeof AdminLayoutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/(main)/_layout': {
       id: '/(main)/_layout'
       path: ''
@@ -106,25 +157,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof mainLayoutRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/(admin)/admin': {
-      id: '/(admin)/admin'
-      path: '/admin'
-      fullPath: '/admin'
-      preLoaderRoute: typeof adminAdminRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/(admin)/_layout': {
-      id: '/(admin)/_layout'
-      path: ''
-      fullPath: ''
-      preLoaderRoute: typeof adminLayoutRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/(main)/_layout/': {
       id: '/(main)/_layout/'
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof mainLayoutIndexRouteImport
+      parentRoute: typeof mainLayoutRoute
+    }
+    '/admin/_layout/users': {
+      id: '/admin/_layout/users'
+      path: '/users'
+      fullPath: '/admin/users'
+      preLoaderRoute: typeof AdminLayoutUsersRouteImport
+      parentRoute: typeof AdminLayoutRoute
+    }
+    '/admin/_layout/dashboard': {
+      id: '/admin/_layout/dashboard'
+      path: '/dashboard'
+      fullPath: '/admin/dashboard'
+      preLoaderRoute: typeof AdminLayoutDashboardRouteImport
+      parentRoute: typeof AdminLayoutRoute
+    }
+    '/(main)/_layout/contacts': {
+      id: '/(main)/_layout/contacts'
+      path: '/contacts'
+      fullPath: '/contacts'
+      preLoaderRoute: typeof mainLayoutContactsRouteImport
       parentRoute: typeof mainLayoutRoute
     }
     '/(main)/_layout/blog': {
@@ -141,37 +199,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof mainLayoutAboutRouteImport
       parentRoute: typeof mainLayoutRoute
     }
-    '/(admin)/_layout/dashboard': {
-      id: '/(admin)/_layout/dashboard'
-      path: '/dashboard'
-      fullPath: '/dashboard'
-      preLoaderRoute: typeof adminLayoutDashboardRouteImport
-      parentRoute: typeof adminLayoutRoute
-    }
   }
 }
-
-interface adminLayoutRouteChildren {
-  adminLayoutDashboardRoute: typeof adminLayoutDashboardRoute
-}
-
-const adminLayoutRouteChildren: adminLayoutRouteChildren = {
-  adminLayoutDashboardRoute: adminLayoutDashboardRoute,
-}
-
-const adminLayoutRouteWithChildren = adminLayoutRoute._addFileChildren(
-  adminLayoutRouteChildren,
-)
 
 interface mainLayoutRouteChildren {
   mainLayoutAboutRoute: typeof mainLayoutAboutRoute
   mainLayoutBlogRoute: typeof mainLayoutBlogRoute
+  mainLayoutContactsRoute: typeof mainLayoutContactsRoute
   mainLayoutIndexRoute: typeof mainLayoutIndexRoute
 }
 
 const mainLayoutRouteChildren: mainLayoutRouteChildren = {
   mainLayoutAboutRoute: mainLayoutAboutRoute,
   mainLayoutBlogRoute: mainLayoutBlogRoute,
+  mainLayoutContactsRoute: mainLayoutContactsRoute,
   mainLayoutIndexRoute: mainLayoutIndexRoute,
 }
 
@@ -179,10 +220,24 @@ const mainLayoutRouteWithChildren = mainLayoutRoute._addFileChildren(
   mainLayoutRouteChildren,
 )
 
+interface AdminLayoutRouteChildren {
+  AdminLayoutDashboardRoute: typeof AdminLayoutDashboardRoute
+  AdminLayoutUsersRoute: typeof AdminLayoutUsersRoute
+}
+
+const AdminLayoutRouteChildren: AdminLayoutRouteChildren = {
+  AdminLayoutDashboardRoute: AdminLayoutDashboardRoute,
+  AdminLayoutUsersRoute: AdminLayoutUsersRoute,
+}
+
+const AdminLayoutRouteWithChildren = AdminLayoutRoute._addFileChildren(
+  AdminLayoutRouteChildren,
+)
+
 const rootRouteChildren: RootRouteChildren = {
-  adminLayoutRoute: adminLayoutRouteWithChildren,
-  adminAdminRoute: adminAdminRoute,
   mainLayoutRoute: mainLayoutRouteWithChildren,
+  AdminLayoutRoute: AdminLayoutRouteWithChildren,
+  AdminIndexRoute: AdminIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
