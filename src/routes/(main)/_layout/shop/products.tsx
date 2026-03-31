@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { SearchIcon, SlidersHorizontalIcon } from "lucide-react";
 import { useMemo, useState } from "react";
 
@@ -17,42 +17,42 @@ import { Input } from "#/components/ui/input";
 import { Label } from "#/components/ui/label";
 import { Separator } from "#/components/ui/separator";
 import { Slider } from "#/components/ui/slider";
-import productsFile from "#/dummy_data/products.json";
+import { formatProductPrice, PRODUCTS, type Product } from "#/lib/products";
 
 export const Route = createFileRoute("/(main)/_layout/shop/products")({
 	component: ShopProductsPage,
 });
 
-type Product = (typeof productsFile.products)[number];
-
-const PRODUCTS = productsFile.products;
-
 const PRICE_MIN = 0;
 const PRICE_MAX = Math.max(...PRODUCTS.map((p) => p.price), 100);
-
-function formatPrice(amount: number): string {
-	return new Intl.NumberFormat("en-US", {
-		style: "currency",
-		currency: "USD",
-		maximumFractionDigits: 0,
-	}).format(amount);
-}
 
 function ProductCard({ product }: { product: Product }) {
 	return (
 		<Card className="overflow-hidden pt-0">
-			<div className="bg-muted relative aspect-4/3 w-full overflow-hidden">
+			<Link
+				to="/shop/$productId"
+				params={{ productId: product.slug }}
+				className="bg-muted block aspect-4/3 w-full overflow-hidden outline-none focus-visible:ring-2 focus-visible:ring-ring"
+			>
 				<img
 					src={product.imageUrl}
 					alt=""
-					className="h-full w-full object-cover"
+					className="h-full w-full object-cover transition-transform duration-300 hover:scale-[1.02]"
 					decoding="async"
 					loading="lazy"
 				/>
-			</div>
+			</Link>
 			<CardHeader className="gap-2">
 				<div className="flex flex-wrap items-start justify-between gap-2">
-					<CardTitle className="text-lg leading-snug">{product.name}</CardTitle>
+					<CardTitle className="text-lg leading-snug">
+						<Link
+							to="/shop/$productId"
+							params={{ productId: product.slug }}
+							className="hover:text-primary focus-visible:ring-ring rounded-sm outline-none focus-visible:ring-2"
+						>
+							{product.name}
+						</Link>
+					</CardTitle>
 					<Badge variant="secondary">{product.category}</Badge>
 				</div>
 				<CardDescription className="line-clamp-2">
@@ -61,11 +61,16 @@ function ProductCard({ product }: { product: Product }) {
 			</CardHeader>
 			<CardContent className="pt-0">
 				<p className="text-xl font-semibold tabular-nums">
-					{formatPrice(product.price)}
+					{formatProductPrice(product.price, product.currency)}
 				</p>
 			</CardContent>
-			<CardFooter className="border-t pt-6">
-				<Button className="w-full" variant="outline" type="button">
+			<CardFooter className="flex flex-col gap-2 border-t pt-6 sm:flex-row">
+				<Button className="w-full sm:flex-1" variant="default" asChild>
+					<Link to="/shop/$productId" params={{ productId: product.slug }}>
+						View details
+					</Link>
+				</Button>
+				<Button className="w-full sm:flex-1" variant="outline" type="button">
 					Add to cart
 				</Button>
 			</CardFooter>
@@ -86,11 +91,12 @@ function ShopProductsPage() {
 	const [maxPrice, setMaxPrice] = useState(PRICE_MAX);
 	const [categoryFilters, setCategoryFilters] = useState<
 		Record<string, boolean>
-	>(() =>
-		Object.fromEntries(categories.map((c) => [c, false])) as Record<
-			string,
-			boolean
-		>,
+	>(
+		() =>
+			Object.fromEntries(categories.map((c) => [c, false])) as Record<
+				string,
+				boolean
+			>,
 	);
 
 	const activeCategories = useMemo(
@@ -104,7 +110,10 @@ function ShopProductsPage() {
 			if (p.price > maxPrice) {
 				return false;
 			}
-			if (activeCategories.length > 0 && !activeCategories.includes(p.category)) {
+			if (
+				activeCategories.length > 0 &&
+				!activeCategories.includes(p.category)
+			) {
 				return false;
 			}
 			if (q) {
@@ -133,9 +142,7 @@ function ShopProductsPage() {
 	}
 
 	const hasActiveFilters =
-		search.trim() !== "" ||
-		maxPrice < PRICE_MAX ||
-		activeCategories.length > 0;
+		search.trim() !== "" || maxPrice < PRICE_MAX || activeCategories.length > 0;
 
 	return (
 		<div className="mx-auto w-full max-w-7xl px-4 py-10 md:px-6">
@@ -202,7 +209,7 @@ function ShopProductsPage() {
 						<div className="flex items-center justify-between gap-2">
 							<p className="text-sm font-medium">Max price</p>
 							<span className="text-muted-foreground text-xs tabular-nums">
-								{formatPrice(maxPrice)}
+								{formatProductPrice(maxPrice)}
 							</span>
 						</div>
 						<Slider
@@ -214,8 +221,8 @@ function ShopProductsPage() {
 							aria-label="Maximum price"
 						/>
 						<div className="text-muted-foreground flex justify-between text-xs tabular-nums">
-							<span>{formatPrice(PRICE_MIN)}</span>
-							<span>{formatPrice(PRICE_MAX)}</span>
+							<span>{formatProductPrice(PRICE_MIN)}</span>
+							<span>{formatProductPrice(PRICE_MAX)}</span>
 						</div>
 					</div>
 
