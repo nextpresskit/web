@@ -1,0 +1,202 @@
+{
+	"articles": [
+		{
+			"id": "1",
+			"slug": "introducing-next-press",
+			"title": "Introducing NextPress: a modern editorial stack",
+			"excerpt": "Why we built a TanStack-first publishing experience and what problems it solves for content teams.",
+			"author": "Maya Chen",
+			"publishedAt": "2026-03-18T09:00:00.000Z",
+			"category": "Company",
+			"readTimeMinutes": 6,
+			"tags": ["announcement", "product", "editorial"]
+		},
+		{
+			"id": "2",
+			"slug": "tanstack-router-file-routing",
+			"title": "File routing patterns that scale with TanStack Router",
+			"excerpt": "Layouts, pathless groups, and how to keep growing routes readable as your app gains surfaces.",
+			"author": "Jordan Ellis",
+			"publishedAt": "2026-03-15T14:30:00.000Z",
+			"category": "Engineering",
+			"readTimeMinutes": 9,
+			"tags": ["tanstack", "routing", "react"]
+		},
+		{
+			"id": "3",
+			"slug": "designing-readable-long-form",
+			"title": "Designing readable long-form articles on the web",
+			"excerpt": "Line length, type scale, and spacing choices that make essays feel effortless to read.",
+			"author": "Sofia Marin",
+			"publishedAt": "2026-03-12T11:00:00.000Z",
+			"category": "Design",
+			"readTimeMinutes": 7,
+			"tags": ["typography", "ux", "content"]
+		},
+		{
+			"id": "4",
+			"slug": "pagination-ux-checklist",
+			"title": "A practical pagination UX checklist",
+			"excerpt": "Skip links, keyboard support, and how to avoid dead ends when archives grow large.",
+			"author": "Jordan Ellis",
+			"publishedAt": "2026-03-10T08:45:00.000Z",
+			"category": "Tutorials",
+			"readTimeMinutes": 5,
+			"tags": ["accessibility", "ux", "patterns"]
+		},
+		{
+			"id": "5",
+			"slug": "from-idea-to-roadmap",
+			"title": "From idea capture to roadmap without the chaos",
+			"excerpt": "A lightweight ritual for turning customer signals into a sequenced plan product teams can trust.",
+			"author": "Alex Ortiz",
+			"publishedAt": "2026-03-08T16:20:00.000Z",
+			"category": "Product",
+			"readTimeMinutes": 8,
+			"tags": ["strategy", "roadmap", "pm"]
+		},
+		{
+			"id": "6",
+			"slug": "css-tokens-at-scale",
+			"title": "Theme tokens that survive handoff between design and code",
+			"excerpt": "Naming, layers, and how to keep dark mode and brand refreshes from becoming rewrites.",
+			"author": "Sofia Marin",
+			"publishedAt": "2026-03-05T10:15:00.000Z",
+			"category": "Design",
+			"readTimeMinutes": 10,
+			"tags": ["design-systems", "css", "tokens"]
+		},
+		{
+			"id": "7",
+			"slug": "streaming-ssr-notes",
+			"title": "Streaming SSR: notes from a recent refactor",
+			"excerpt": "What we measured before changing our shell strategy, and the surprises in time-to-first-byte.",
+			"author": "Jordan Ellis",
+			"publishedAt": "2026-03-02T09:00:00.000Z",
+			"category": "Engineering",
+			"readTimeMinutes": 12,
+			"tags": ["performance", "react", "ssr"]
+		},
+		{
+			"id": "8",
+			"slug": "writing-better-release-notes",
+			"title": "Writing release notes people actually read",
+			"excerpt": "Structure, tone, and examples that turn changelogs into a trust-building habit.",
+			"author": "Maya Chen",
+			"publishedAt": "2026-02-27T13:00:00.000Z",
+			"category": "Product",
+			"readTimeMinutes": 4,
+			"tags": ["communication", "writing", "launch"]
+		},
+		{
+			"id": "9",
+			"slug": "editorial-calendar-basics",
+			"title": "Editorial calendar basics for small teams",
+			"excerpt": "Cadence, ownership, and a template you can reuse without heavyweight tooling.",
+			"author": "Maya Chen",
+			"publishedAt": "2026-02-22T09:30:00.000Z",
+			"category": "Tutorials",
+			"readTimeMinutes": 6,
+			"tags": ["editorial", "process", "teams"]
+		},
+		{
+			"id": "10",
+			"slug": "open-source-sustainability",
+			"title": "Healthy habits for open-source sustainability",
+			"excerpt": "Boundaries, funding models, and communication norms that keep maintainers in the game.",
+			"author": "Alex Ortiz",
+			"publishedAt": "2026-02-18T11:45:00.000Z",
+			"category": "Company",
+			"readTimeMinutes": 7,
+			"tags": ["open-source", "culture", "community"]
+		},
+		{
+			"id": "11",
+			"slug": "form-validation-patterns",
+			"title": "Form validation patterns with accessible error recovery",
+			"excerpt": "When to validate on blur, how to group errors, and patterns that work with screen readers.",
+			"author": "Jordan Ellis",
+			"publishedAt": "2026-02-14T08:00:00.000Z",
+			"category": "Engineering",
+			"readTimeMinutes": 11,
+			"tags": ["forms", "accessibility", "react"]
+		},
+		{
+			"id": "12",
+			"slug": "microcopy-for-empty-states",
+			"title": "Microcopy for empty states that guide the next step",
+			"excerpt": "Turn “nothing here yet” into a clear invitation with examples from real dashboards.",
+			"author": "Sofia Marin",
+			"publishedAt": "2026-02-10T15:10:00.000Z",
+			"category": "Design",
+			"readTimeMinutes": 5,
+			"tags": ["ux-writing", "empty-states", "onboarding"]
+		},
+		{
+			"id": "13",
+			"slug": "measuring-content-roi",
+			"title": "Measuring content ROI without drowning in dashboards",
+			"excerpt": "A small set of north-star metrics and how to tie posts to activation and retention.",
+			"author": "Alex Ortiz",
+			"publishedAt": "2026-02-05T12:00:00.000Z",
+			"category": "Product",
+			"readTimeMinutes": 8,
+			"tags": ["analytics", "growth", "content"]
+		},
+		{
+			"id": "14",
+			"slug": "draft-review-playbook",
+			"title": "A draft review playbook for async teams",
+			"excerpt": "Roles, comment etiquette, and when to move from doc to staging without endless loops.",
+			"author": "Maya Chen",
+			"publishedAt": "2026-02-01T09:20:00.000Z",
+			"category": "Tutorials",
+			"readTimeMinutes": 6,
+			"tags": ["collaboration", "workflow", "editing"]
+		},
+		{
+			"id": "15",
+			"slug": "security-basics-for-frontends",
+			"title": "Security basics every frontend developer should revisit",
+			"excerpt": "CSP, third-party scripts, and the few checks that catch most common regressions.",
+			"author": "Jordan Ellis",
+			"publishedAt": "2026-01-28T10:40:00.000Z",
+			"category": "Engineering",
+			"readTimeMinutes": 9,
+			"tags": ["security", "web", "checklist"]
+		},
+		{
+			"id": "16",
+			"slug": "brand-voice-and-tone",
+			"title": "Brand voice and tone: a worksheet you can ship this week",
+			"excerpt": "Concrete exercises to align writers and designers on how the product should sound.",
+			"author": "Sofia Marin",
+			"publishedAt": "2026-01-22T14:00:00.000Z",
+			"category": "Design",
+			"readTimeMinutes": 6,
+			"tags": ["brand", "writing", "voice"]
+		},
+		{
+			"id": "17",
+			"slug": "year-one-retrospective",
+			"title": "Year one: what we learned shipping in public",
+			"excerpt": "Shipping cadence, community feedback loops, and the mistakes we would make again anyway.",
+			"author": "Maya Chen",
+			"publishedAt": "2026-01-15T11:30:00.000Z",
+			"category": "Company",
+			"readTimeMinutes": 7,
+			"tags": ["retrospective", "startup", "community"]
+		},
+		{
+			"id": "18",
+			"slug": "search-and-discovery-on-blogs",
+			"title": "Search and discovery on blogs: start simple",
+			"excerpt": "Facets, tags, and site search options ranked by effort versus impact for most teams.",
+			"author": "Alex Ortiz",
+			"publishedAt": "2026-01-08T09:00:00.000Z",
+			"category": "Product",
+			"readTimeMinutes": 5,
+			"tags": ["search", "ia", "blogs"]
+		}
+	]
+}
