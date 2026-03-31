@@ -1,16 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import {
-	ArrowRightIcon,
-	BookOpenIcon,
-	ComponentIcon,
-	GlobeIcon,
-	LayersIcon,
-	MailIcon,
-	PhoneIcon,
-	ShieldCheckIcon,
-	TestTubeIcon,
-	ZapIcon,
-} from "lucide-react";
+import { ArrowRightIcon, LayersIcon, MailIcon, PhoneIcon } from "lucide-react";
 
 import {
 	Accordion,
@@ -28,118 +17,30 @@ import {
 	CardTitle,
 } from "#/components/ui/card";
 import { Separator } from "#/components/ui/separator";
+import {
+	ABOUT_FAQ_ITEMS,
+	ABOUT_INTRO,
+	FEATURES,
+	PROJECTS,
+	SITE_CONTACT,
+} from "#/content/site";
 
 export const Route = createFileRoute("/(main)/_layout/about")({
 	component: About,
 });
-
-const CONTACT = {
-	emailDisplay: "hello@example.com",
-	emailHref: "mailto:hello@example.com",
-	phoneDisplay: "+1 (415) 555-0142",
-	phoneHref: "tel:+14155550142",
-	github: "https://github.com",
-} as const;
-
-const FEATURES = [
-	{
-		icon: ZapIcon,
-		title: "TanStack Start and Router",
-		description:
-			"File-based routes, type-safe links, and SSR-ready data loading so pages stay fast and predictable as you grow.",
-	},
-	{
-		icon: BookOpenIcon,
-		title: "Publishing-ready blog",
-		description:
-			"Article listings, detail pages, tags, and pagination wired to structured content—swap the JSON for CMS or MDX when you’re ready.",
-	},
-	{
-		icon: ComponentIcon,
-		title: "shadcn/ui on Tailwind CSS v4",
-		description:
-			"Accessible primitives you own, styled with a modern token-based theme and typography that reads well on any device.",
-	},
-	{
-		icon: GlobeIcon,
-		title: "Paraglide i18n",
-		description:
-			"Localized URLs and message catalogs are built in so you can ship multiple locales without bolting on a separate stack.",
-	},
-	{
-		icon: ShieldCheckIcon,
-		title: "Typed configuration",
-		description:
-			"T3-style environment validation keeps secrets and flags honest between local dev and production.",
-	},
-	{
-		icon: TestTubeIcon,
-		title: "Quality tooling",
-		description:
-			"Biome for lint and format, Vitest for tests, and React Hook Form with Zod for forms—fewer bikeshedded decisions.",
-	},
-] as const;
-
-const PROJECTS = [
-	{
-		name: "NextPress",
-		description:
-			"This starter: a full-width editorial layout, blog, contacts, and admin scaffolding you can extend or strip down.",
-		href: CONTACT.github,
-		external: true,
-		label: "View on GitHub",
-	},
-	{
-		name: "Content kit",
-		description:
-			"Reusable article schema, author metadata, and tag utilities shared across listing and post pages.",
-		href: "/blog",
-		external: false,
-		label: "Open blog",
-	},
-	{
-		name: "Admin shell",
-		description:
-			"Protected dashboard routes for future CMS controls, user management, or analytics—ready for your backend.",
-		href: "/admin",
-		external: false,
-		label: "See admin area",
-	},
-] as const;
-
-const FAQ_ITEMS: Array<{ q: string; a: string }> = [
-	{
-		q: "What is NextPress?",
-		a: "NextPress is an opinionated publishing starter for teams that want React, TanStack Start, and a real blog—without rebuilding routing, layout, and content plumbing from scratch.",
-	},
-	{
-		q: "Can I use my own CMS or markdown?",
-		a: "Yes. The demo uses JSON for articles so everything runs offline; replace the loaders with your CMS SDK, filesystem reads, or a headless API while keeping the same UI patterns.",
-	},
-	{
-		q: "Is the admin area production-ready?",
-		a: "The admin routes are a UI shell to extend. Add authentication, role checks, and your data layer before exposing anything sensitive.",
-	},
-	{
-		q: "How do I deploy?",
-		a: "Build with your host’s Vite or TanStack Start adapter. Set env vars through the validated env module and point production URLs in your site config.",
-	},
-];
 
 function About() {
 	return (
 		<main className="container mx-auto max-w-6xl px-4 py-10">
 			<header className="mb-12 space-y-4">
 				<p className="font-medium text-muted-foreground text-sm tracking-wide uppercase">
-					About
+					{ABOUT_INTRO.kicker}
 				</p>
 				<h1 className="font-semibold text-3xl tracking-tight md:text-4xl">
-					NextPress: a modern publishing starter
+					{ABOUT_INTRO.title}
 				</h1>
 				<p className="max-w-3xl text-lg text-muted-foreground leading-relaxed">
-					NextPress pairs TanStack Start with an editorial UI, a working blog,
-					and sensible defaults for forms, i18n, and styling—so you spend time
-					on story and product, not wiring fundamentals.
+					{ABOUT_INTRO.lede}
 				</p>
 				<div className="flex flex-wrap gap-3 pt-2">
 					<Button asChild>
@@ -219,7 +120,7 @@ function About() {
 							<div className="flex flex-wrap gap-2 pt-1">
 								<Button variant="outline" size="sm" asChild>
 									<a
-										href={CONTACT.github}
+										href={SITE_CONTACT.github}
 										target="_blank"
 										rel="noopener noreferrer"
 									>
@@ -227,7 +128,9 @@ function About() {
 									</a>
 								</Button>
 								<Button variant="outline" size="sm" asChild>
-									<a href={CONTACT.emailHref}>{CONTACT.emailDisplay}</a>
+									<a href={SITE_CONTACT.emailHref}>
+										{SITE_CONTACT.emailDisplay}
+									</a>
 								</Button>
 							</div>
 						</div>
@@ -294,7 +197,7 @@ function About() {
 					FAQ
 				</h2>
 				<Accordion type="single" collapsible className="w-full">
-					{FAQ_ITEMS.map((item, i) => (
+					{ABOUT_FAQ_ITEMS.map((item, i) => (
 						<AccordionItem key={item.q} value={`faq-${i}`}>
 							<AccordionTrigger className="text-left">
 								{item.q}
@@ -330,18 +233,18 @@ function About() {
 								<MailIcon className="size-4 shrink-0 text-muted-foreground" />
 								<a
 									className="font-medium underline-offset-4 hover:underline"
-									href={CONTACT.emailHref}
+									href={SITE_CONTACT.emailHref}
 								>
-									{CONTACT.emailDisplay}
+									{SITE_CONTACT.emailDisplay}
 								</a>
 							</li>
 							<li className="flex flex-wrap items-center gap-2">
 								<PhoneIcon className="size-4 shrink-0 text-muted-foreground" />
 								<a
 									className="font-medium underline-offset-4 hover:underline"
-									href={CONTACT.phoneHref}
+									href={SITE_CONTACT.phoneHref}
 								>
-									{CONTACT.phoneDisplay}
+									{SITE_CONTACT.phoneDisplay}
 								</a>
 							</li>
 						</ul>
@@ -355,7 +258,7 @@ function About() {
 						</Button>
 						<Button size="lg" variant="outline" asChild>
 							<a
-								href={CONTACT.github}
+								href={SITE_CONTACT.github}
 								target="_blank"
 								rel="noopener noreferrer"
 							>

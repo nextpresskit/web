@@ -40,43 +40,11 @@ import {
 import { Input } from "#/components/ui/input";
 import { Separator } from "#/components/ui/separator";
 import { Textarea } from "#/components/ui/textarea";
+import { CONTACT_FAQ_ITEMS, HOURS, OFFICE } from "#/content/site";
 
 export const Route = createFileRoute("/(main)/_layout/contacts")({
 	component: ContactsPage,
 });
-
-const OFFICE = {
-	name: "NextPress Studio",
-	addressLines: ["1200 Market Street", "Suite 400", "San Francisco, CA 94102"],
-	phoneDisplay: "+1 (415) 555-0142",
-	phoneHref: "tel:+14155550142",
-	emailDisplay: "hello@example.com",
-	emailHref: "mailto:hello@example.com",
-	github: "https://github.com",
-	mapsSearch:
-		"https://www.openstreetmap.org/search?query=1200%20Market%20Street%20San%20Francisco",
-} as const;
-
-const HOURS: Array<{ days: string; hours: string }> = [
-	{ days: "Monday – Friday", hours: "9:00 a.m. – 6:00 p.m. PT" },
-	{ days: "Saturday", hours: "By appointment" },
-	{ days: "Sunday", hours: "Closed" },
-];
-
-const FAQ_ITEMS: Array<{ q: string; a: string }> = [
-	{
-		q: "How quickly do you reply to messages?",
-		a: "We aim to answer general inquiries within one business day. Support for existing customers may be faster depending on your plan.",
-	},
-	{
-		q: "Do you offer demos or calls?",
-		a: "Yes—mention your preferred times in the form and we will send a calendar link. We keep first calls to 25 minutes.",
-	},
-	{
-		q: "Can I visit in person?",
-		a: "Our studio welcomes scheduled visits. Ring the intercom at the lobby or email ahead so we can meet you downstairs.",
-	},
-];
 
 const contactFormSchema = z.object({
 	name: z.string().trim().min(2, "Please enter your name."),
@@ -398,7 +366,7 @@ function ContactsPage() {
 					</div>
 				</div>
 				<Accordion type="single" collapsible className="w-full">
-					{FAQ_ITEMS.map((item, i) => (
+					{CONTACT_FAQ_ITEMS.map((item, i) => (
 						<AccordionItem value={`faq-${i}`} key={item.q}>
 							<AccordionTrigger className="text-left">
 								{item.q}
