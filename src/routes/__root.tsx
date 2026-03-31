@@ -7,6 +7,7 @@ import {
 } from "@tanstack/react-router";
 import { TanStackRouterDevtoolsPanel } from "@tanstack/react-router-devtools";
 import { getLocale } from "#/paraglide/runtime";
+import { TooltipProvider } from "@/components/ui/tooltip";
 import TanStackQueryDevtools from "../integrations/tanstack-query/devtools";
 import TanStackQueryProvider from "../integrations/tanstack-query/root-provider";
 import appCss from "../styles.css?url";
@@ -55,7 +56,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
 			</head>
 			<body className="font-sans antialiased wrap-anywhere selection:bg-[rgba(79,184,178,0.24)]">
 				<TanStackQueryProvider>
-					{children}
+					<TooltipProvider>{children}</TooltipProvider>
 					<TanStackDevtools
 						config={{
 							position: "bottom-right",
