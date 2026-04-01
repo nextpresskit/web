@@ -132,6 +132,26 @@ export const Route = createFileRoute("/(main)/_layout/blog/$postId")({
 		}
 		return { article };
 	},
+	head: ({ loaderData }) => {
+		const article = loaderData?.article;
+		if (!article) {
+			return {};
+		}
+		const title = article.title;
+		const description = article.excerpt;
+		const ogImage = article.coverImage;
+		return {
+			meta: [
+				{ title },
+				{ name: "description", content: description },
+				{ property: "og:title", content: title },
+				{ property: "og:description", content: description },
+				...(ogImage
+					? [{ property: "og:image", content: ogImage } as const]
+					: []),
+			],
+		};
+	},
 	notFoundComponent: PostNotFound,
 	component: PostPage,
 });

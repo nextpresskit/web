@@ -1,6 +1,5 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { ArrowLeftIcon } from "lucide-react";
-import { useEffect } from "react";
 
 import { ProductImageGallery } from "#/components/shop/product-detail/ProductImageGallery";
 import { ProductMetaSections } from "#/components/shop/product-detail/ProductMetaSections";
@@ -22,6 +21,29 @@ export const Route = createFileRoute("/(main)/_layout/shop/$productId")({
 			throw notFound();
 		}
 		return { product };
+	},
+	head: ({ loaderData }) => {
+		const product = loaderData?.product;
+		if (!product) {
+			return {};
+		}
+		const title = product.seoTitle;
+		const description = product.seoDescription;
+		const ogImage =
+			product.images && product.images.length > 0
+				? product.images[0]
+				: product.imageUrl;
+		return {
+			meta: [
+				{ title },
+				{ name: "description", content: description },
+				{ property: "og:title", content: title },
+				{ property: "og:description", content: description },
+				...(ogImage
+					? [{ property: "og:image", content: ogImage } as const]
+					: []),
+			],
+		};
 	},
 	notFoundComponent: ProductNotFound,
 	component: ProductPage,
@@ -55,17 +77,6 @@ function ProductPage() {
 			: product.imageUrl
 				? [product.imageUrl]
 				: [];
-
-	useEffect(() => {
-		document.title = product.seoTitle;
-		let meta = document.querySelector('meta[name="description"]');
-		if (!meta) {
-			meta = document.createElement("meta");
-			meta.setAttribute("name", "description");
-			document.head.appendChild(meta);
-		}
-		meta.setAttribute("content", product.seoDescription);
-	}, [product.seoDescription, product.seoTitle]);
 
 	return (
 		<main className="mx-auto w-full max-w-7xl px-4 py-10 md:px-6">
