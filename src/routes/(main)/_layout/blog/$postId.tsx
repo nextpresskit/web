@@ -259,7 +259,7 @@ function PostPage() {
 						/>
 					</div>
 
-					<div className="flex flex-col gap-8 lg:flex-row lg:gap-12">
+					<div className="flex flex-col gap-8 pb-10 lg:flex-row lg:gap-12">
 						<div className="min-w-0 flex-1">
 							<div className="mb-8 md:hidden">
 								<AuthorCard article={article} />
