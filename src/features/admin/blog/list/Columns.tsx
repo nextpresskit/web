@@ -1,5 +1,11 @@
-import type { ColumnDef } from "@tanstack/react-table";
-import { MoreVertical, PanelRightOpen } from "lucide-react";
+import type { Column, ColumnDef } from "@tanstack/react-table";
+import {
+	ArrowDown,
+	ArrowDownUp,
+	ArrowUp,
+	MoreVertical,
+	PanelRightOpen,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import {
@@ -45,6 +51,32 @@ function formatTableDate(iso: string | null): string {
 	}
 }
 
+function SortableColumnHeader<TData, TValue>({
+	column,
+	title,
+}: {
+	column: Column<TData, TValue>;
+	title: string;
+}) {
+	const sorted = column.getIsSorted();
+	const SortIcon =
+		sorted === "asc" ? ArrowUp : sorted === "desc" ? ArrowDown : ArrowDownUp;
+
+	return (
+		<Button
+			variant="ghost"
+			className="-ml-2 h-8 px-2 font-medium"
+			onClick={() => column.toggleSorting(sorted === "asc")}
+		>
+			{title}
+			<SortIcon
+				className={`ml-1 size-4 shrink-0 ${sorted ? "text-foreground opacity-100" : "opacity-60"}`}
+				aria-hidden
+			/>
+		</Button>
+	);
+}
+
 export function createColumns({
 	onStatusChange,
 }: CreateColumnsOptions): ColumnDef<BlogPosts>[] {
@@ -79,7 +111,10 @@ export function createColumns({
 		},
 		{
 			accessorKey: "id",
-			header: "Id",
+			header: ({ column }) => (
+				<SortableColumnHeader column={column} title="Id" />
+			),
+			sortingFn: "basic",
 			cell: ({ row }) => (
 				<span className="tabular-nums text-muted-foreground">
 					{row.original.id}
@@ -88,7 +123,9 @@ export function createColumns({
 		},
 		{
 			accessorKey: "title",
-			header: "Title",
+			header: ({ column }) => (
+				<SortableColumnHeader column={column} title="Title" />
+			),
 			cell: ({ row }) => (
 				<div className="flex w-fit max-w-[min(500px,50vw)] min-w-0 items-center gap-1">
 					<div
@@ -115,7 +152,9 @@ export function createColumns({
 		{
 			id: "author",
 			accessorFn: (row) => row.author.displayName,
-			header: "Author",
+			header: ({ column }) => (
+				<SortableColumnHeader column={column} title="Author" />
+			),
 			cell: ({ row }) => (
 				<span className="text-muted-foreground">
 					{row.original.author.displayName}
@@ -124,14 +163,18 @@ export function createColumns({
 		},
 		{
 			accessorKey: "reviewer",
-			header: "Reviewer",
+			header: ({ column }) => (
+				<SortableColumnHeader column={column} title="Reviewer" />
+			),
 			cell: ({ row }) => (
 				<span className="text-muted-foreground">{row.original.reviewer}</span>
 			),
 		},
 		{
 			accessorKey: "status",
-			header: "Status",
+			header: ({ column }) => (
+				<SortableColumnHeader column={column} title="Status" />
+			),
 			cell: ({ row }) => (
 				<Select
 					value={row.original.status}
@@ -157,7 +200,9 @@ export function createColumns({
 		{
 			id: "categories",
 			accessorFn: (row) => row.categories.map((c) => c.name).join(", "),
-			header: "Categories",
+			header: ({ column }) => (
+				<SortableColumnHeader column={column} title="Categories" />
+			),
 			cell: ({ row }) => (
 				<div
 					className="max-w-[min(220px,28vw)] truncate text-muted-foreground"
@@ -169,7 +214,10 @@ export function createColumns({
 		},
 		{
 			accessorKey: "createdAt",
-			header: "Created",
+			header: ({ column }) => (
+				<SortableColumnHeader column={column} title="Created" />
+			),
+			sortingFn: "datetime",
 			cell: ({ row }) => (
 				<span className="whitespace-nowrap text-muted-foreground tabular-nums">
 					{formatTableDate(row.original.createdAt)}
@@ -178,7 +226,11 @@ export function createColumns({
 		},
 		{
 			accessorKey: "publishedAt",
-			header: "Published",
+			header: ({ column }) => (
+				<SortableColumnHeader column={column} title="Published" />
+			),
+			sortingFn: "datetime",
+			sortUndefined: "last",
 			cell: ({ row }) => (
 				<span className="whitespace-nowrap text-muted-foreground tabular-nums">
 					{formatTableDate(row.original.publishedAt)}
@@ -187,6 +239,8 @@ export function createColumns({
 		},
 		{
 			id: "actions",
+			header: "",
+			enableSorting: false,
 			cell: ({ row }) => (
 				<DropdownMenu modal={false}>
 					<DropdownMenuTrigger asChild>
