@@ -1,4 +1,5 @@
 import { createFileRoute, Outlet } from "@tanstack/react-router";
+import { FooterAdmin } from "#/components/admin/FooterAdmin";
 import { HeaderAdmin } from "#/components/admin/HeaderAdmin";
 import { NotFoundAdmin } from "#/components/admin/NotFoundAdmin";
 import { AdminSidebar } from "#/components/admin/Sideabar/AdminSidebar";
@@ -29,6 +30,7 @@ function RouteComponent() {
 						<Toaster />
 					</div>
 				</div>
+				<FooterAdmin />
 			</SidebarInset>
 		</SidebarProvider>
 	);

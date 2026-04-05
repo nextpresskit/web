@@ -319,7 +319,7 @@ export function DataTableAdmin({
 	return (
 		<Tabs
 			defaultValue="outline"
-			className="w-full flex-col justify-start gap-6"
+			className="w-full flex-col justify-start gap-6 pb-6"
 		>
 			<div className="flex items-center justify-between px-4 lg:px-6">
 				<Label htmlFor="view-selector" className="sr-only">
