@@ -30,6 +30,7 @@ export interface BlogPostEditValues {
 	title: string;
 	status: string;
 	slug: string;
+	tags: string[];
 	bodyMarkdown: string;
 	seo: BlogPostSeoEditValues;
 }
@@ -49,6 +50,7 @@ export function BlogPostEditForm({ post }: BlogPostEditFormProps) {
 			title: post.title,
 			status: post.status,
 			slug: post.slug,
+			tags: post.tags.map((t) => t.name),
 			bodyMarkdown: post.bodyMarkdownPreview,
 			seo: {
 				title: post.seo.title,

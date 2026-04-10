@@ -3,7 +3,9 @@ import type {
 	FormValidateOrFn,
 } from "@tanstack/form-core";
 import type { ReactFormExtendedApi } from "@tanstack/react-form";
-import { useRef } from "react";
+import { XIcon } from "lucide-react";
+import { useRef, useState } from "react";
+import { Badge } from "@/components/ui/badge";
 import {
 	Card,
 	CardContent,
@@ -47,6 +49,7 @@ interface GeneralTabProps {
 
 export const GeneralTab = ({ post, postForm }: GeneralTabProps) => {
 	const slugTracksTitleRef = useRef(true);
+	const [tagDraft, setTagDraft] = useState("");
 
 	return (
 		<Card>
@@ -163,7 +166,67 @@ export const GeneralTab = ({ post, postForm }: GeneralTabProps) => {
 					)}
 				</postForm.Field>
 
-				
+				<postForm.Field name="tags">
+					{(field) => (
+						<div className="grid gap-2">
+							<Label htmlFor={field.name}>Tags</Label>
+
+							<div className="border-input focus-within:ring-ring/50 focus-within:border-ring rounded-md border px-3 py-2 focus-within:ring-[3px]">
+								<div className="mb-2 flex flex-wrap gap-2">
+									{field.state.value.map((tag) => (
+										<Badge key={tag} variant="secondary" className="gap-1 pr-1">
+											<span>{tag}</span>
+											<button
+												type="button"
+												onClick={() =>
+													field.setValue(
+														field.state.value.filter((t) => t !== tag),
+													)
+												}
+												className="hover:bg-muted rounded-full p-0.5"
+												aria-label={`Remove ${tag}`}
+											>
+												<XIcon className="size-3" />
+											</button>
+										</Badge>
+									))}
+								</div>
+								<Input
+									id={field.name}
+									value={tagDraft}
+									onBlur={field.handleBlur}
+									onChange={(e) => setTagDraft(e.target.value)}
+									onKeyDown={(e) => {
+										if (e.key === "Enter" || e.key === ",") {
+											e.preventDefault();
+											const nextTag = tagDraft.trim().replaceAll(",", "");
+											if (!nextTag) return;
+											if (field.state.value.includes(nextTag)) {
+												setTagDraft("");
+												return;
+											}
+											field.setValue([...field.state.value, nextTag]);
+											setTagDraft("");
+										}
+
+										if (
+											e.key === "Backspace" &&
+											tagDraft.length === 0 &&
+											field.state.value.length > 0
+										) {
+											field.setValue(field.state.value.slice(0, -1));
+										}
+									}}
+									placeholder="Type a tag and press Enter"
+									className="border-0 px-0 font-mono text-sm shadow-none focus-visible:ring-0"
+								/>
+							</div>
+							<p className="text-muted-foreground text-xs">
+								Press Enter or comma to add a tag.
+							</p>
+						</div>
+					)}
+				</postForm.Field>
 			</CardContent>
 		</Card>
 	);
