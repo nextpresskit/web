@@ -11,7 +11,19 @@ import type { BlogPosts } from "@/features/admin/blog/schema";
 import { GeneralTab } from "./components/GeneralTab";
 import { BlogPostMarkdownEditor } from "./components/MarkDownEditor";
 import { PostButtons } from "./components/PostButtons";
+import { SEOTab } from "./components/SEOTab";
 import { fieldError } from "./helpers";
+
+export interface BlogPostSeoEditValues {
+	title: string;
+	description: string;
+	canonicalUrl: string;
+	robots: string;
+	ogType: string;
+	ogImage: string;
+	twitterCard: string;
+	structuredDataJson: string;
+}
 
 export interface BlogPostEditValues {
 	id: number;
@@ -19,6 +31,7 @@ export interface BlogPostEditValues {
 	status: string;
 	slug: string;
 	bodyMarkdown: string;
+	seo: BlogPostSeoEditValues;
 }
 
 type BlogPostEditFormProps = {
@@ -37,9 +50,24 @@ export function BlogPostEditForm({ post }: BlogPostEditFormProps) {
 			status: post.status,
 			slug: post.slug,
 			bodyMarkdown: post.bodyMarkdownPreview,
+			seo: {
+				title: post.seo.title,
+				description: post.seo.description ?? "",
+				canonicalUrl: post.seo.canonicalUrl ?? "",
+				robots: post.seo.robots,
+				ogType: post.seo.ogType,
+				ogImage: post.seo.ogImage ?? "",
+				twitterCard: post.seo.twitterCard,
+				structuredDataJson: post.seo.structuredData
+					? JSON.stringify(post.seo.structuredData, null, 2)
+					: "",
+			},
 		} satisfies BlogPostEditValues,
-		onSubmit: async ({ value }) => {
-			console.log(value);
+		onSubmit: async ({ value, formApi }) => {
+			console.log("🚀 ~ BlogPostEditForm ~ formApi:", formApi);
+			const { fieldMeta } = formApi.state;
+			console.log("BlogPostEditForm submit value:", value);
+			console.log("BlogPostEditForm fields state (fieldMeta):", fieldMeta);
 		},
 	});
 
@@ -119,18 +147,9 @@ export function BlogPostEditForm({ post }: BlogPostEditFormProps) {
 					</div>
 				</TabsContent>
 				<TabsContent value="seo">
-					<Card>
-						<CardHeader>
-							<CardTitle>SEO</CardTitle>
-							<CardDescription>
-								Generate and download your detailed reports. Export data in
-								multiple formats for analysis.
-							</CardDescription>
-						</CardHeader>
-						<CardContent className="text-sm text-muted-foreground">
-							You have 5 reports ready and available to export.
-						</CardContent>
-					</Card>
+					<div className="flex min-w-0 w-full max-w-full flex-col gap-6 p-6">
+						<SEOTab post={post} postForm={postForm} />
+					</div>
 				</TabsContent>
 				<TabsContent value="social">
 					<Card>
