@@ -105,12 +105,12 @@ export function BlogPostEditForm({ post }: BlogPostEditFormProps) {
 					</div>
 				</div>
 				<TabsContent value="general">
-					<div className="flex min-w-0 w-full max-w-full flex-col gap-6 p-6">
+					<div className="flex min-w-0 w-full max-w-full flex-col gap-6 px-6">
 						<GeneralTab post={post} postForm={postForm} />
 					</div>
 				</TabsContent>
 				<TabsContent value="content">
-					<div className="flex min-w-0 w-full max-w-full flex-col gap-6 p-6">
+					<div className="flex min-w-0 w-full max-w-full flex-col gap-6 px-6">
 						<Card>
 							<CardHeader>
 								<CardTitle>Content</CardTitle>
@@ -149,7 +149,7 @@ export function BlogPostEditForm({ post }: BlogPostEditFormProps) {
 					</div>
 				</TabsContent>
 				<TabsContent value="seo">
-					<div className="flex min-w-0 w-full max-w-full flex-col gap-6 p-6">
+					<div className="flex min-w-0 w-full max-w-full flex-col gap-6 px-6">
 						<SEOTab post={post} postForm={postForm} />
 					</div>
 				</TabsContent>

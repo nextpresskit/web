@@ -6,10 +6,10 @@ import {
 	SidebarHeader,
 	SidebarRail,
 } from "@/components/ui/sidebar";
+import { data as navData } from "../../../config/adminSidebarNav";
 import { NavMain } from "./NavMain";
 import { NavProjects } from "./NavProjects";
 import { NavUser } from "./NavUser";
-import { data as navData } from "./navData";
 import { TeamSwitcher } from "./TeamSwitcher";
 
 export function AdminSidebar({

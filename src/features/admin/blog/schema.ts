@@ -176,3 +176,16 @@ export const schema = z.object({
 });
 
 export type BlogPosts = z.infer<typeof schema>;
+
+export const blogCategoryListItemSchema = z.object({
+	id: z.number(),
+	name: z.string(),
+	slug: z.string(),
+	description: z.string().nullable(),
+	postCount: z.number(),
+	parentName: z.string().nullable(),
+	createdAt: z.string(),
+	updatedAt: z.string(),
+});
+
+export type BlogCategoryListItem = z.infer<typeof blogCategoryListItemSchema>;

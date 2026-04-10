@@ -1,0 +1,122 @@
+[
+	{
+		"id": 1,
+		"name": "Engineering",
+		"slug": "engineering",
+		"description": "Product development, architecture, and technical deep dives.",
+		"postCount": 42,
+		"parentName": null,
+		"createdAt": "2024-01-08T10:00:00.000Z",
+		"updatedAt": "2026-03-12T14:22:00.000Z"
+	},
+	{
+		"id": 2,
+		"name": "Design",
+		"slug": "design",
+		"description": "UX, UI, brand, and design systems.",
+		"postCount": 28,
+		"parentName": null,
+		"createdAt": "2024-01-08T10:05:00.000Z",
+		"updatedAt": "2026-02-01T09:15:00.000Z"
+	},
+	{
+		"id": 3,
+		"name": "Company news",
+		"slug": "company-news",
+		"description": null,
+		"postCount": 15,
+		"parentName": null,
+		"createdAt": "2024-02-14T11:30:00.000Z",
+		"updatedAt": "2025-12-20T16:00:00.000Z"
+	},
+	{
+		"id": 4,
+		"name": "Frontend",
+		"slug": "frontend",
+		"description": "React, CSS, performance, and browser APIs.",
+		"postCount": 19,
+		"parentName": "Engineering",
+		"createdAt": "2024-03-01T08:00:00.000Z",
+		"updatedAt": "2026-03-10T12:00:00.000Z"
+	},
+	{
+		"id": 5,
+		"name": "Backend",
+		"slug": "backend",
+		"description": "APIs, databases, and infrastructure.",
+		"postCount": 17,
+		"parentName": "Engineering",
+		"createdAt": "2024-03-01T08:02:00.000Z",
+		"updatedAt": "2026-01-18T11:45:00.000Z"
+	},
+	{
+		"id": 6,
+		"name": "Tutorials",
+		"slug": "tutorials",
+		"description": "Step-by-step guides for readers.",
+		"postCount": 33,
+		"parentName": null,
+		"createdAt": "2024-04-10T09:00:00.000Z",
+		"updatedAt": "2026-04-01T10:30:00.000Z"
+	},
+	{
+		"id": 7,
+		"name": "Accessibility",
+		"slug": "accessibility",
+		"description": "Inclusive design and WCAG-focused content.",
+		"postCount": 11,
+		"parentName": "Design",
+		"createdAt": "2024-05-22T13:20:00.000Z",
+		"updatedAt": "2025-11-05T08:10:00.000Z"
+	},
+	{
+		"id": 8,
+		"name": "Culture",
+		"slug": "culture",
+		"description": "Team stories, hiring, and remote work.",
+		"postCount": 9,
+		"parentName": null,
+		"createdAt": "2024-06-01T15:00:00.000Z",
+		"updatedAt": "2025-10-12T17:00:00.000Z"
+	},
+	{
+		"id": 9,
+		"name": "Security",
+		"slug": "security",
+		"description": "Threat modeling, compliance, and secure defaults.",
+		"postCount": 14,
+		"parentName": "Engineering",
+		"createdAt": "2024-07-19T10:45:00.000Z",
+		"updatedAt": "2026-02-28T09:00:00.000Z"
+	},
+	{
+		"id": 10,
+		"name": "Changelog",
+		"slug": "changelog",
+		"description": "Release notes and product updates.",
+		"postCount": 56,
+		"parentName": null,
+		"createdAt": "2024-08-01T07:00:00.000Z",
+		"updatedAt": "2026-04-08T06:00:00.000Z"
+	},
+	{
+		"id": 11,
+		"name": "Interviews",
+		"slug": "interviews",
+		"description": null,
+		"postCount": 7,
+		"parentName": "Culture",
+		"createdAt": "2024-09-15T12:00:00.000Z",
+		"updatedAt": "2025-09-01T12:00:00.000Z"
+	},
+	{
+		"id": 12,
+		"name": "Research",
+		"slug": "research",
+		"description": "User research methods and findings.",
+		"postCount": 6,
+		"parentName": "Design",
+		"createdAt": "2024-10-03T14:30:00.000Z",
+		"updatedAt": "2026-01-05T11:20:00.000Z"
+	}
+]
