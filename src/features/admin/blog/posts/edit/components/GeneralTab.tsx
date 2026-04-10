@@ -22,7 +22,7 @@ import {
 	SelectTrigger,
 	SelectValue,
 } from "@/components/ui/select";
-import { BLOG_POST_STATUSES } from "@/features/admin/blog/list/Columns";
+import { BLOG_POST_STATUSES } from "@/features/admin/blog/posts/list/Columns";
 import type { BlogPosts } from "@/features/admin/blog/schema";
 import type { BlogPostEditValues } from "../BlogPostEditForm";
 import { fieldError, titleToSlug } from "../helpers";

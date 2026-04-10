@@ -1,0 +1,98 @@
+[
+	{
+		"id": "1",
+		"displayName": "Jordan Lee",
+		"email": "jordan.lee@example.com",
+		"role": "Lead editor",
+		"avatarUrl": "https://cdn.example.com/avatars/jordan.jpg",
+		"bio": "Editorial lead covering platform and engineering stories.",
+		"status": "Active",
+		"postCount": 24,
+		"createdAt": "2024-01-15T10:00:00.000Z",
+		"updatedAt": "2026-03-28T14:22:00.000Z"
+	},
+	{
+		"id": "2",
+		"displayName": "Sam Rivera",
+		"email": "sam.rivera@example.com",
+		"role": "Staff writer",
+		"avatarUrl": "https://cdn.example.com/avatars/sam.jpg",
+		"bio": "Product narratives, launches, and customer spotlights.",
+		"status": "Active",
+		"postCount": 18,
+		"createdAt": "2024-03-02T09:30:00.000Z",
+		"updatedAt": "2026-04-01T11:05:00.000Z"
+	},
+	{
+		"id": "3",
+		"displayName": "Emma Davis",
+		"email": "emma.davis@example.com",
+		"role": "Reviewer",
+		"avatarUrl": null,
+		"bio": "Copy and compliance review for published content.",
+		"status": "Active",
+		"postCount": 3,
+		"createdAt": "2024-06-10T16:45:00.000Z",
+		"updatedAt": "2026-02-14T08:10:00.000Z"
+	},
+	{
+		"id": "4",
+		"displayName": "Alex Chen",
+		"email": "alex.chen@example.com",
+		"role": "Contributor",
+		"avatarUrl": "https://cdn.example.com/avatars/alex.jpg",
+		"bio": "Guest posts on developer experience and tooling.",
+		"status": "Active",
+		"postCount": 7,
+		"createdAt": "2024-08-20T12:00:00.000Z",
+		"updatedAt": "2026-03-10T19:40:00.000Z"
+	},
+	{
+		"id": "5",
+		"displayName": "Priya Nair",
+		"email": "priya.nair@example.com",
+		"role": "Editor",
+		"avatarUrl": "https://cdn.example.com/avatars/priya.jpg",
+		"bio": "Growth, marketing, and lifecycle content programs.",
+		"status": "Invited",
+		"postCount": 0,
+		"createdAt": "2026-03-01T15:00:00.000Z",
+		"updatedAt": "2026-03-01T15:00:00.000Z"
+	},
+	{
+		"id": "6",
+		"displayName": "Marcus Webb",
+		"email": "marcus.webb@example.com",
+		"role": "Contributor",
+		"avatarUrl": null,
+		"bio": "Security and infrastructure deep dives.",
+		"status": "Active",
+		"postCount": 11,
+		"createdAt": "2023-11-05T14:20:00.000Z",
+		"updatedAt": "2026-01-22T10:15:00.000Z"
+	},
+	{
+		"id": "7",
+		"displayName": "Nina Okonkwo",
+		"email": "nina.okonkwo@example.com",
+		"role": "Staff writer",
+		"avatarUrl": "https://cdn.example.com/avatars/nina.jpg",
+		"bio": "Design systems, accessibility, and inclusive UX.",
+		"status": "Active",
+		"postCount": 15,
+		"createdAt": "2024-04-18T11:11:00.000Z",
+		"updatedAt": "2026-04-08T09:00:00.000Z"
+	},
+	{
+		"id": "8",
+		"displayName": "Diego Alvarez",
+		"email": "diego.alvarez@example.com",
+		"role": "Contributor",
+		"avatarUrl": "https://cdn.example.com/avatars/diego.jpg",
+		"bio": "Data and analytics storytelling for product teams.",
+		"status": "Suspended",
+		"postCount": 4,
+		"createdAt": "2024-09-01T08:00:00.000Z",
+		"updatedAt": "2025-12-01T17:30:00.000Z"
+	}
+]

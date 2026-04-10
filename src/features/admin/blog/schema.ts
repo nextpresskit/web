@@ -189,3 +189,18 @@ export const blogCategoryListItemSchema = z.object({
 });
 
 export type BlogCategoryListItem = z.infer<typeof blogCategoryListItemSchema>;
+
+export const blogAuthorListItemSchema = z.object({
+	id: z.string(),
+	displayName: z.string(),
+	email: z.string(),
+	role: z.string(),
+	avatarUrl: z.string().nullable(),
+	bio: z.string(),
+	status: z.string(),
+	postCount: z.number(),
+	createdAt: z.string(),
+	updatedAt: z.string(),
+});
+
+export type BlogAuthorListItem = z.infer<typeof blogAuthorListItemSchema>;

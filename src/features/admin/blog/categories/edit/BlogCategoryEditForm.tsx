@@ -20,8 +20,11 @@ import {
 	SelectValue,
 } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
+import {
+	fieldError,
+	titleToSlug,
+} from "@/features/admin/blog/posts/edit/helpers";
 import type { BlogCategoryListItem } from "@/features/admin/blog/schema";
-import { fieldError, titleToSlug } from "@/features/admin/blog/edit/helpers";
 
 const PARENT_NONE = "__none__";
 
@@ -113,7 +116,11 @@ export function BlogCategoryEditForm({
 					>
 						<Trash2 />
 					</Button>
-					<Button type="button" className="cursor-pointer" onClick={handleOnSubmit}>
+					<Button
+						type="button"
+						className="cursor-pointer"
+						onClick={handleOnSubmit}
+					>
 						Save changes
 					</Button>
 					<Button type="button" variant="outline" onClick={handleSaveAndClose}>
@@ -254,7 +261,9 @@ export function BlogCategoryEditForm({
 							{formatDetailDate(category.createdAt)}
 						</p>
 						<p>
-							<span className="font-medium text-foreground">Last updated: </span>
+							<span className="font-medium text-foreground">
+								Last updated:{" "}
+							</span>
 							{formatDetailDate(category.updatedAt)}
 						</p>
 					</div>

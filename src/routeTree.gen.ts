@@ -25,8 +25,10 @@ import { Route as mainLayoutShopProductIdRouteImport } from './routes/(main)/_la
 import { Route as mainLayoutBlogPostIdRouteImport } from './routes/(main)/_layout/blog/$postId'
 import { Route as AdminLayoutBlogPostsIndexRouteImport } from './routes/admin/_layout/blog/posts/index'
 import { Route as AdminLayoutBlogCategoriesIndexRouteImport } from './routes/admin/_layout/blog/categories/index'
+import { Route as AdminLayoutBlogAuthorsIndexRouteImport } from './routes/admin/_layout/blog/authors/index'
 import { Route as AdminLayoutBlogPostsPostIdRouteImport } from './routes/admin/_layout/blog/posts/$postId'
 import { Route as AdminLayoutBlogCategoriesCategoryIdRouteImport } from './routes/admin/_layout/blog/categories/$categoryId'
+import { Route as AdminLayoutBlogAuthorsAuthorIdRouteImport } from './routes/admin/_layout/blog/authors/$authorId'
 
 const AdminIndexRoute = AdminIndexRouteImport.update({
   id: '/admin/',
@@ -109,6 +111,12 @@ const AdminLayoutBlogCategoriesIndexRoute =
     path: '/blog/categories/',
     getParentRoute: () => AdminLayoutRoute,
   } as any)
+const AdminLayoutBlogAuthorsIndexRoute =
+  AdminLayoutBlogAuthorsIndexRouteImport.update({
+    id: '/blog/authors/',
+    path: '/blog/authors/',
+    getParentRoute: () => AdminLayoutRoute,
+  } as any)
 const AdminLayoutBlogPostsPostIdRoute =
   AdminLayoutBlogPostsPostIdRouteImport.update({
     id: '/blog/posts/$postId',
@@ -119,6 +127,12 @@ const AdminLayoutBlogCategoriesCategoryIdRoute =
   AdminLayoutBlogCategoriesCategoryIdRouteImport.update({
     id: '/blog/categories/$categoryId',
     path: '/blog/categories/$categoryId',
+    getParentRoute: () => AdminLayoutRoute,
+  } as any)
+const AdminLayoutBlogAuthorsAuthorIdRoute =
+  AdminLayoutBlogAuthorsAuthorIdRouteImport.update({
+    id: '/blog/authors/$authorId',
+    path: '/blog/authors/$authorId',
     getParentRoute: () => AdminLayoutRoute,
   } as any)
 
@@ -136,8 +150,10 @@ export interface FileRoutesByFullPath {
   '/shop/products': typeof mainLayoutShopProductsRoute
   '/blog/': typeof mainLayoutBlogIndexRoute
   '/shop/': typeof mainLayoutShopIndexRoute
+  '/admin/blog/authors/$authorId': typeof AdminLayoutBlogAuthorsAuthorIdRoute
   '/admin/blog/categories/$categoryId': typeof AdminLayoutBlogCategoriesCategoryIdRoute
   '/admin/blog/posts/$postId': typeof AdminLayoutBlogPostsPostIdRoute
+  '/admin/blog/authors/': typeof AdminLayoutBlogAuthorsIndexRoute
   '/admin/blog/categories/': typeof AdminLayoutBlogCategoriesIndexRoute
   '/admin/blog/posts/': typeof AdminLayoutBlogPostsIndexRoute
 }
@@ -154,8 +170,10 @@ export interface FileRoutesByTo {
   '/shop/products': typeof mainLayoutShopProductsRoute
   '/blog': typeof mainLayoutBlogIndexRoute
   '/shop': typeof mainLayoutShopIndexRoute
+  '/admin/blog/authors/$authorId': typeof AdminLayoutBlogAuthorsAuthorIdRoute
   '/admin/blog/categories/$categoryId': typeof AdminLayoutBlogCategoriesCategoryIdRoute
   '/admin/blog/posts/$postId': typeof AdminLayoutBlogPostsPostIdRoute
+  '/admin/blog/authors': typeof AdminLayoutBlogAuthorsIndexRoute
   '/admin/blog/categories': typeof AdminLayoutBlogCategoriesIndexRoute
   '/admin/blog/posts': typeof AdminLayoutBlogPostsIndexRoute
 }
@@ -175,8 +193,10 @@ export interface FileRoutesById {
   '/(main)/_layout/shop/products': typeof mainLayoutShopProductsRoute
   '/(main)/_layout/blog/': typeof mainLayoutBlogIndexRoute
   '/(main)/_layout/shop/': typeof mainLayoutShopIndexRoute
+  '/admin/_layout/blog/authors/$authorId': typeof AdminLayoutBlogAuthorsAuthorIdRoute
   '/admin/_layout/blog/categories/$categoryId': typeof AdminLayoutBlogCategoriesCategoryIdRoute
   '/admin/_layout/blog/posts/$postId': typeof AdminLayoutBlogPostsPostIdRoute
+  '/admin/_layout/blog/authors/': typeof AdminLayoutBlogAuthorsIndexRoute
   '/admin/_layout/blog/categories/': typeof AdminLayoutBlogCategoriesIndexRoute
   '/admin/_layout/blog/posts/': typeof AdminLayoutBlogPostsIndexRoute
 }
@@ -196,8 +216,10 @@ export interface FileRouteTypes {
     | '/shop/products'
     | '/blog/'
     | '/shop/'
+    | '/admin/blog/authors/$authorId'
     | '/admin/blog/categories/$categoryId'
     | '/admin/blog/posts/$postId'
+    | '/admin/blog/authors/'
     | '/admin/blog/categories/'
     | '/admin/blog/posts/'
   fileRoutesByTo: FileRoutesByTo
@@ -214,8 +236,10 @@ export interface FileRouteTypes {
     | '/shop/products'
     | '/blog'
     | '/shop'
+    | '/admin/blog/authors/$authorId'
     | '/admin/blog/categories/$categoryId'
     | '/admin/blog/posts/$postId'
+    | '/admin/blog/authors'
     | '/admin/blog/categories'
     | '/admin/blog/posts'
   id:
@@ -234,8 +258,10 @@ export interface FileRouteTypes {
     | '/(main)/_layout/shop/products'
     | '/(main)/_layout/blog/'
     | '/(main)/_layout/shop/'
+    | '/admin/_layout/blog/authors/$authorId'
     | '/admin/_layout/blog/categories/$categoryId'
     | '/admin/_layout/blog/posts/$postId'
+    | '/admin/_layout/blog/authors/'
     | '/admin/_layout/blog/categories/'
     | '/admin/_layout/blog/posts/'
   fileRoutesById: FileRoutesById
@@ -360,6 +386,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AdminLayoutBlogCategoriesIndexRouteImport
       parentRoute: typeof AdminLayoutRoute
     }
+    '/admin/_layout/blog/authors/': {
+      id: '/admin/_layout/blog/authors/'
+      path: '/blog/authors'
+      fullPath: '/admin/blog/authors/'
+      preLoaderRoute: typeof AdminLayoutBlogAuthorsIndexRouteImport
+      parentRoute: typeof AdminLayoutRoute
+    }
     '/admin/_layout/blog/posts/$postId': {
       id: '/admin/_layout/blog/posts/$postId'
       path: '/blog/posts/$postId'
@@ -372,6 +405,13 @@ declare module '@tanstack/react-router' {
       path: '/blog/categories/$categoryId'
       fullPath: '/admin/blog/categories/$categoryId'
       preLoaderRoute: typeof AdminLayoutBlogCategoriesCategoryIdRouteImport
+      parentRoute: typeof AdminLayoutRoute
+    }
+    '/admin/_layout/blog/authors/$authorId': {
+      id: '/admin/_layout/blog/authors/$authorId'
+      path: '/blog/authors/$authorId'
+      fullPath: '/admin/blog/authors/$authorId'
+      preLoaderRoute: typeof AdminLayoutBlogAuthorsAuthorIdRouteImport
       parentRoute: typeof AdminLayoutRoute
     }
   }
@@ -407,8 +447,10 @@ interface AdminLayoutRouteChildren {
   AdminLayoutDashboardRoute: typeof AdminLayoutDashboardRoute
   AdminLayoutProductsRoute: typeof AdminLayoutProductsRoute
   AdminLayoutUsersRoute: typeof AdminLayoutUsersRoute
+  AdminLayoutBlogAuthorsAuthorIdRoute: typeof AdminLayoutBlogAuthorsAuthorIdRoute
   AdminLayoutBlogCategoriesCategoryIdRoute: typeof AdminLayoutBlogCategoriesCategoryIdRoute
   AdminLayoutBlogPostsPostIdRoute: typeof AdminLayoutBlogPostsPostIdRoute
+  AdminLayoutBlogAuthorsIndexRoute: typeof AdminLayoutBlogAuthorsIndexRoute
   AdminLayoutBlogCategoriesIndexRoute: typeof AdminLayoutBlogCategoriesIndexRoute
   AdminLayoutBlogPostsIndexRoute: typeof AdminLayoutBlogPostsIndexRoute
 }
@@ -417,9 +459,11 @@ const AdminLayoutRouteChildren: AdminLayoutRouteChildren = {
   AdminLayoutDashboardRoute: AdminLayoutDashboardRoute,
   AdminLayoutProductsRoute: AdminLayoutProductsRoute,
   AdminLayoutUsersRoute: AdminLayoutUsersRoute,
+  AdminLayoutBlogAuthorsAuthorIdRoute: AdminLayoutBlogAuthorsAuthorIdRoute,
   AdminLayoutBlogCategoriesCategoryIdRoute:
     AdminLayoutBlogCategoriesCategoryIdRoute,
   AdminLayoutBlogPostsPostIdRoute: AdminLayoutBlogPostsPostIdRoute,
+  AdminLayoutBlogAuthorsIndexRoute: AdminLayoutBlogAuthorsIndexRoute,
   AdminLayoutBlogCategoriesIndexRoute: AdminLayoutBlogCategoriesIndexRoute,
   AdminLayoutBlogPostsIndexRoute: AdminLayoutBlogPostsIndexRoute,
 }
