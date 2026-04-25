@@ -8,11 +8,10 @@ import {
 } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import type { BlogPosts } from "@/features/admin/blog/schema";
+import { ContentTab } from "./components/ContentTab";
 import { GeneralTab } from "./components/GeneralTab";
-import { BlogPostMarkdownEditor } from "./components/MarkDownEditor";
 import { PostButtons } from "./components/PostButtons";
 import { SEOTab } from "./components/SEOTab";
-import { fieldError } from "./helpers";
 
 export interface BlogPostSeoEditValues {
 	title: string;
@@ -111,41 +110,7 @@ export function BlogPostEditForm({ post }: BlogPostEditFormProps) {
 				</TabsContent>
 				<TabsContent value="content">
 					<div className="flex min-w-0 w-full max-w-full flex-col gap-6 px-6">
-						<Card>
-							<CardHeader>
-								<CardTitle>Content</CardTitle>
-								<CardDescription>
-									Add your blog post content here.
-								</CardDescription>
-							</CardHeader>
-							<CardContent className="text-sm text-muted-foreground">
-								<postForm.Field
-									name="bodyMarkdown"
-									validators={{
-										onChange: ({ value }: { value: string }) =>
-											value.trim().length === 0
-												? "Body markdown is required"
-												: undefined,
-									}}
-								>
-									{(field) => (
-										<div className="grid gap-2">
-											<BlogPostMarkdownEditor
-												id={field.name}
-												label="Body (markdown)"
-												value={field.state.value}
-												onChange={(v) => field.setValue(v)}
-											/>
-											{fieldError(field.state.meta.errors) ? (
-												<p className="text-destructive text-sm">
-													{fieldError(field.state.meta.errors)}
-												</p>
-											) : null}
-										</div>
-									)}
-								</postForm.Field>
-							</CardContent>
-						</Card>
+						<ContentTab postForm={postForm} />
 					</div>
 				</TabsContent>
 				<TabsContent value="seo">
