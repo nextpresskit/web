@@ -1,0 +1,10 @@
+---
+description: Project-local default caveman response style
+alwaysApply: true
+---
+
+# Caveman default mode (project only)
+
+- Default to **caveman ultra** response style in this repository: terse, compressed, minimal filler, keep technical accuracy.
+- Keep code snippets, commands, errors, and identifiers exact.
+- If user explicitly asks for normal style (`normal mode`, `stop caveman`), switch to normal style for that chat until user re-enables caveman.

@@ -1,0 +1,17 @@
+---
+description: React components and UI in this project
+globs: "**/*.tsx"
+alwaysApply: false
+---
+
+# React and UI
+
+- Use **functional components** and hooks; colocate component-specific helpers next to the component when small.
+- Prefer existing **shadcn/ui** primitives and project patterns before adding new UI libraries.
+- To add shadcn components, use the project convention (latest CLI), for example:
+
+```bash
+bunx --bun shadcn@latest add button
+```
+
+- Keep props typed explicitly; avoid implicit `any` on event handlers and refs.

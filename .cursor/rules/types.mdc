@@ -1,0 +1,19 @@
+---
+description: TypeScript types and interfaces
+alwaysApply: true
+---
+
+# Types and interfaces
+
+- Prefer `interface` for object shapes that may be extended or merged; use `type` for unions, intersections, mapped types, and utility compositions.
+- Export types used across modules; keep internal-only types unexported when they are implementation details.
+- Name types in PascalCase (`UserRow`, `CreatePostInput`). Avoid prefixing with `I` (e.g. not `IUser`).
+- Prefer `unknown` over `any` at boundaries; narrow before use.
+
+```ts
+// Prefer
+type Result = { ok: true; data: string } | { ok: false; error: string };
+
+// Avoid
+const x: any = JSON.parse(raw);
+```

@@ -1,0 +1,11 @@
+---
+description: Formatting, lint, and change scope for this repo
+alwaysApply: true
+---
+
+# Code style and edits
+
+- Run **Biome** for format and lint (`bun run format`, `bun run lint`, or `bun run check`) after substantive edits when practical.
+- Use **`#/*`** path aliases for imports from `src` (see `package.json` `imports`), matching existing import style in nearby files.
+- Keep changes **minimal and scoped** to the task: no drive-by refactors or unrelated file churn.
+- Match naming, patterns, and abstraction level of the surrounding code.
