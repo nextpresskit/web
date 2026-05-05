@@ -3,4 +3,4 @@ import type { BlogPosts } from "@/features/admin/blog/schema";
 import { clientAxios } from "@/lib/axios/clientAxios";
 
 export const getPostsAdmin = (): Promise<AxiosResponse<BlogPosts[]>> =>
-	clientAxios.get<BlogPosts[]>("/posts");
+	clientAxios.get<BlogPosts[]>("/admin/posts");

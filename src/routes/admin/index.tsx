@@ -14,7 +14,6 @@ import {
 import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { setAccessTokens } from "@/lib/auth/tokenStorage";
 import { login } from "@/services/auth/authServices";
 
 export const Route = createFileRoute("/admin/")({
@@ -37,10 +36,6 @@ function AdminPage() {
 			throw new Error("Sign in failed");
 		}
 
-		setAccessTokens(
-			response.data.tokens.accessToken,
-			response.data.tokens.refreshToken,
-		);
 		await navigate({ to: "/admin/dashboard" });
 	};
 
