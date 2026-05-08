@@ -36,7 +36,7 @@ function AdminPage() {
 			throw new Error("Sign in failed");
 		}
 
-		await navigate({ to: "/admin/dashboard" });
+		// await navigate({ to: "/admin/dashboard" });
 	};
 
 	const signInForm = useForm({

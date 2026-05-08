@@ -11,5 +11,7 @@ dist-ssr
 .vinxi
 localhost-key.pem
 localhost.pem
+app.nextpresskit.test-key.pem
+app.nextpresskit.test.pem
 __unconfig*
 todos.json
