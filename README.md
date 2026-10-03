@@ -89,7 +89,7 @@ NextPressKit frontend is designed to work with the backend API project:
 
 This project includes ParaglideJS for localized routing and message formatting.
 
-- Messages live in `project.inlang/messages`.
+- Messages live in `messages/` (`messages/{locale}.json`, configured in `project.inlang/settings.json`).
 - URLs are localized through the Paraglide Vite plugin and router rewrite hooks.
 - Running the dev server or build regenerates `src/paraglide` outputs.
 
