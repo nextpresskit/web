@@ -1,6 +1,6 @@
-# Next Press Kit
+# NextPressKit
 
-Next Press Kit is a starter kit for building modern web apps using [TanStack Start](https://tanstack.com/start), [Tailwind CSS](https://tailwindcss.com/), and [Shadcn UI](https://ui.shadcn.com/).
+NextPressKit is a [PN Scripts](https://pnscripts.com) product ([product page](https://pnscripts.com/products/nextpresskit)): a starter kit for building modern web apps using [TanStack Start](https://tanstack.com/start), [Tailwind CSS](https://tailwindcss.com/), and [Shadcn UI](https://ui.shadcn.com/).
 
 The goal of this project is to give developers a strong starting point they can clone and build on, with common product needs already in place: authentication handling, blog post creation flows, and an administration area.
 
@@ -79,7 +79,7 @@ bun --bun run check
 
 ## Backend Integration
 
-Next Press Kit frontend is designed to work with the backend API project:
+NextPressKit frontend is designed to work with the backend API project:
 
 - Backend repo: [https://github.com/nextpresskit/backend](https://github.com/nextpresskit/backend)
 - API responsibilities include authentication, content APIs, and admin-related backend operations.
