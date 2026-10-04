@@ -28,7 +28,7 @@ export const MainHeader = () => {
 						className="shrink-0 font-semibold"
 						asChild
 					>
-						<Link to="/">NextPress Kit</Link>
+						<Link to="/">NextPressKit</Link>
 					</Button>
 					<Separator orientation="vertical" className="hidden h-6 sm:block" />
 					<nav
