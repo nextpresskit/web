@@ -16,6 +16,8 @@ export const env = createEnv({
 		VITE_APP_TITLE: z.string().min(1).optional(),
 		/** NextPressKit backend base URL; see .env.example and src/lib/axios/clientAxios.ts. */
 		VITE_API_URL: z.string().url().optional(),
+		/** Public origin of this app (absolute og:image URLs); see .env.example and src/lib/siteUrl.ts. */
+		VITE_SITE_URL: z.string().url().optional(),
 	},
 
 	/**

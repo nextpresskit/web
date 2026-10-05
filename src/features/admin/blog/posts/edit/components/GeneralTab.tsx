@@ -5,25 +5,28 @@ import type {
 import type { ReactFormExtendedApi } from "@tanstack/react-form";
 import { XIcon } from "lucide-react";
 import { useRef, useState } from "react";
-import { Badge } from "@/components/ui/badge";
+import type { AdminPost } from "#/@types/admin";
+import { Badge } from "#/components/ui/badge";
 import {
 	Card,
 	CardContent,
 	CardDescription,
 	CardHeader,
 	CardTitle,
-} from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
+} from "#/components/ui/card";
+import { Input } from "#/components/ui/input";
+import { Label } from "#/components/ui/label";
 import {
 	Select,
 	SelectContent,
 	SelectItem,
 	SelectTrigger,
 	SelectValue,
-} from "@/components/ui/select";
-import { BLOG_POST_STATUSES } from "@/features/admin/blog/posts/list/Columns";
-import type { BlogPosts } from "@/features/admin/blog/schema";
+} from "#/components/ui/select";
+import {
+	ADMIN_POST_STATUSES,
+	postStatusLabel,
+} from "#/features/admin/blog/posts/postStatus";
 import type { BlogPostEditValues } from "../BlogPostEditForm";
 import { fieldError, titleToSlug } from "../helpers";
 
@@ -43,7 +46,7 @@ type BlogPostEditFormApi = ReactFormExtendedApi<
 >;
 
 interface GeneralTabProps {
-	post: BlogPosts;
+	post: AdminPost;
 	postForm: BlogPostEditFormApi;
 }
 
@@ -97,7 +100,7 @@ export const GeneralTab = ({ post, postForm }: GeneralTabProps) => {
 					name="status"
 					validators={{
 						onChange: ({ value }) =>
-							!(BLOG_POST_STATUSES as readonly string[]).includes(value)
+							!(ADMIN_POST_STATUSES as readonly string[]).includes(value)
 								? "Pick a valid status"
 								: undefined,
 					}}
@@ -117,9 +120,9 @@ export const GeneralTab = ({ post, postForm }: GeneralTabProps) => {
 									<SelectValue placeholder="Status" />
 								</SelectTrigger>
 								<SelectContent>
-									{BLOG_POST_STATUSES.map((s) => (
+									{ADMIN_POST_STATUSES.map((s) => (
 										<SelectItem key={s} value={s}>
-											{s}
+											{postStatusLabel(s)}
 										</SelectItem>
 									))}
 								</SelectContent>
@@ -222,7 +225,8 @@ export const GeneralTab = ({ post, postForm }: GeneralTabProps) => {
 								/>
 							</div>
 							<p className="text-muted-foreground text-xs">
-								Press Enter or comma to add a tag.
+								Tags are assigned through the taxonomy API; edits here are not
+								saved yet.
 							</p>
 						</div>
 					)}

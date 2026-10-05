@@ -16,7 +16,7 @@ import {
 	CardDescription,
 	CardHeader,
 	CardTitle,
-} from "@/components/ui/card";
+} from "#/components/ui/card";
 import {
 	type ChartConfig,
 	ChartContainer,
@@ -24,10 +24,11 @@ import {
 	ChartLegendContent,
 	ChartTooltip,
 	ChartTooltipContent,
-} from "@/components/ui/chart";
-import adminProductSales from "@/dummy_data/admin_product_sales.json";
-import adminVisits from "@/dummy_data/admin_visits.json";
-import { formatProductPrice } from "@/helpers/products";
+} from "#/components/ui/chart";
+import adminProductSales from "#/dummy_data/admin_product_sales.json";
+import adminVisits from "#/dummy_data/admin_visits.json";
+import { ContentOverview } from "#/features/admin/dashboard/ContentOverview";
+import { formatProductPrice } from "#/helpers/products";
 
 export const Route = createFileRoute("/admin/_layout/dashboard")({
 	component: RouteComponent,
@@ -114,14 +115,22 @@ function RouteComponent() {
 			<header className="space-y-1">
 				<h1 className="text-2xl font-semibold tracking-tight">Dashboard</h1>
 				<p className="text-muted-foreground text-sm">
-					Traffic and storefront performance at a glance.
+					Live content from the NextPressKit backend, plus demo traffic and
+					sales charts.
 				</p>
 			</header>
 
-			<section aria-labelledby="overview-heading">
-				<h2 id="overview-heading" className="sr-only">
-					Overview metrics
-				</h2>
+			<ContentOverview />
+
+			<section aria-labelledby="overview-heading" className="space-y-4">
+				<div className="flex items-center gap-2">
+					<h2 id="overview-heading" className="font-semibold text-lg">
+						Traffic and sales
+					</h2>
+					<span className="rounded-md border px-2 py-0.5 text-muted-foreground text-xs">
+						Demo data
+					</span>
+				</div>
 				<div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
 					<StatCard
 						title="Page views"

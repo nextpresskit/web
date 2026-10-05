@@ -9,7 +9,7 @@ import {
 	CardDescription,
 	CardHeader,
 	CardTitle,
-} from "@/components/ui/card";
+} from "#/components/ui/card";
 import type { BlogPostEditValues } from "../BlogPostEditForm";
 import { fieldError } from "../helpers";
 import { BlogPostMarkdownEditor } from "./MarkDownEditor";

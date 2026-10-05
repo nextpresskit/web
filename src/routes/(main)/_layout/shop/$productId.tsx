@@ -1,18 +1,19 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { ArrowLeftIcon } from "lucide-react";
 
-import { ProductImageGallery } from "@/components/shop/product-detail/ProductImageGallery";
-import { ProductMetaSections } from "@/components/shop/product-detail/ProductMetaSections";
-import { ProductPurchasePanel } from "@/components/shop/product-detail/ProductPurchasePanel";
-import { Button } from "@/components/ui/button";
+import { ProductImageGallery } from "#/components/shop/product-detail/ProductImageGallery";
+import { ProductMetaSections } from "#/components/shop/product-detail/ProductMetaSections";
+import { ProductPurchasePanel } from "#/components/shop/product-detail/ProductPurchasePanel";
+import { Button } from "#/components/ui/button";
 import {
 	Card,
 	CardContent,
 	CardDescription,
 	CardHeader,
 	CardTitle,
-} from "@/components/ui/card";
-import { findProductByParam } from "@/helpers/products";
+} from "#/components/ui/card";
+import { findProductByParam } from "#/helpers/products";
+import { absoluteUrl } from "#/lib/siteUrl";
 
 export const Route = createFileRoute("/(main)/_layout/shop/$productId")({
 	loader: ({ params }) => {
@@ -29,10 +30,11 @@ export const Route = createFileRoute("/(main)/_layout/shop/$productId")({
 		}
 		const title = product.seoTitle;
 		const description = product.seoDescription;
-		const ogImage =
+		const ogImage = absoluteUrl(
 			product.images && product.images.length > 0
 				? product.images[0]
-				: product.imageUrl;
+				: product.imageUrl,
+		);
 		return {
 			meta: [
 				{ title },
