@@ -21,16 +21,16 @@
     "@sindresorhus/transliterate": "^2.3.1",
     "@t3-oss/env-core": "^0.13.10",
     "@tailwindcss/vite": "^4.1.18",
-    "@tanstack/match-sorter-utils": "latest",
-    "@tanstack/react-devtools": "latest",
-    "@tanstack/react-form": "latest",
-    "@tanstack/react-query": "latest",
-    "@tanstack/react-query-devtools": "latest",
-    "@tanstack/react-router": "latest",
-    "@tanstack/react-router-devtools": "latest",
-    "@tanstack/react-router-ssr-query": "latest",
-    "@tanstack/react-start": "latest",
-    "@tanstack/react-table": "latest",
+    "@tanstack/match-sorter-utils": "8.19.4",
+    "@tanstack/react-devtools": "0.10.0",
+    "@tanstack/react-form": "1.28.5",
+    "@tanstack/react-query": "5.95.2",
+    "@tanstack/react-query-devtools": "5.95.2",
+    "@tanstack/react-router": "1.168.8",
+    "@tanstack/react-router-devtools": "1.166.11",
+    "@tanstack/react-router-ssr-query": "1.166.10",
+    "@tanstack/react-start": "1.167.13",
+    "@tanstack/react-table": "8.21.3",
     "@tanstack/router-plugin": "^1.132.0",
     "@types/jsonwebtoken": "^9.0.10",
     "@uiw/react-md-editor": "^4.1.0",
@@ -56,7 +56,7 @@
     "@biomejs/biome": "2.4.5",
     "@inlang/paraglide-js": "^2.13.1",
     "@tailwindcss/typography": "^0.5.16",
-    "@tanstack/devtools-vite": "latest",
+    "@tanstack/devtools-vite": "0.6.0",
     "@testing-library/dom": "^10.4.1",
     "@testing-library/react": "^16.3.0",
     "@types/node": "^22.10.2",
@@ -69,11 +69,8 @@
     "vite-tsconfig-paths": "^5.1.4",
     "vitest": "^3.0.5"
   },
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "esbuild",
-      "lightningcss"
-    ]
-  },
-  "packageManager": "pnpm@8.15.3+sha1.64838798f519c18029c1e8a1310e16101fc2eda0"
+  "trustedDependencies": [
+    "esbuild",
+    "lightningcss"
+  ]
 }
