@@ -2,8 +2,8 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { SearchIcon, SlidersHorizontalIcon } from "lucide-react";
 import { useMemo, useState } from "react";
 
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
+import { Badge } from "#/components/ui/badge";
+import { Button } from "#/components/ui/button";
 import {
 	Card,
 	CardContent,
@@ -11,13 +11,13 @@ import {
 	CardFooter,
 	CardHeader,
 	CardTitle,
-} from "@/components/ui/card";
-import { Checkbox } from "@/components/ui/checkbox";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Separator } from "@/components/ui/separator";
-import { Slider } from "@/components/ui/slider";
-import { formatProductPrice, PRODUCTS, type Product } from "@/helpers/products";
+} from "#/components/ui/card";
+import { Checkbox } from "#/components/ui/checkbox";
+import { Input } from "#/components/ui/input";
+import { Label } from "#/components/ui/label";
+import { Separator } from "#/components/ui/separator";
+import { Slider } from "#/components/ui/slider";
+import { formatProductPrice, PRODUCTS, type Product } from "#/helpers/products";
 
 const SHOP_PRODUCTS_PAGE_TITLE = "Shop products | TanStack Start Starter";
 const SHOP_PRODUCTS_PAGE_DESCRIPTION =

@@ -1,6 +1,6 @@
 import type { InternalAxiosRequestConfig } from "axios";
 import { afterEach, describe, expect, it } from "vitest";
-import { clientAxios } from "@/lib/axios/clientAxios";
+import { clientAxios } from "#/lib/axios/clientAxios";
 import { getCurrentUser, login, logout, refresh } from "./authServices";
 
 const originalAdapter = clientAxios.defaults.adapter;

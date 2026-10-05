@@ -4,7 +4,7 @@ import {
 	Collapsible,
 	CollapsibleContent,
 	CollapsibleTrigger,
-} from "@/components/ui/collapsible";
+} from "#/components/ui/collapsible";
 import {
 	SidebarGroup,
 	SidebarGroupLabel,
@@ -14,8 +14,8 @@ import {
 	SidebarMenuSub,
 	SidebarMenuSubButton,
 	SidebarMenuSubItem,
-} from "@/components/ui/sidebar";
-import type { AdminNavItem } from "@/config/adminSidebarNav";
+} from "#/components/ui/sidebar";
+import type { AdminNavItem } from "#/config/adminSidebarNav";
 
 function isActivePath(pathname: string, url: string) {
 	return pathname === url || pathname.startsWith(`${url}/`);

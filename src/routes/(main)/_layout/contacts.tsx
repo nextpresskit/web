@@ -18,16 +18,16 @@ import {
 	AccordionContent,
 	AccordionItem,
 	AccordionTrigger,
-} from "@/components/ui/accordion";
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
-import { Button } from "@/components/ui/button";
+} from "#/components/ui/accordion";
+import { Alert, AlertDescription, AlertTitle } from "#/components/ui/alert";
+import { Button } from "#/components/ui/button";
 import {
 	Card,
 	CardContent,
 	CardDescription,
 	CardHeader,
 	CardTitle,
-} from "@/components/ui/card";
+} from "#/components/ui/card";
 import {
 	Form,
 	FormControl,
@@ -35,11 +35,11 @@ import {
 	FormItem,
 	FormLabel,
 	FormMessage,
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { Separator } from "@/components/ui/separator";
-import { Textarea } from "@/components/ui/textarea";
-import { CONTACT_FAQ_ITEMS, HOURS, OFFICE } from "@/content/site";
+} from "#/components/ui/form";
+import { Input } from "#/components/ui/input";
+import { Separator } from "#/components/ui/separator";
+import { Textarea } from "#/components/ui/textarea";
+import { CONTACT_FAQ_ITEMS, HOURS, OFFICE } from "#/content/site";
 
 export const Route = createFileRoute("/(main)/_layout/contacts")({
 	component: ContactsPage,

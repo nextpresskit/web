@@ -1,8 +1,8 @@
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { Link, useNavigate } from "@tanstack/react-router";
 import { ChevronsUpDown, LogIn, LogOut, UserRound } from "lucide-react";
-import type { User } from "@/@types/user";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import type { User } from "#/@types/user";
+import { Avatar, AvatarFallback, AvatarImage } from "#/components/ui/avatar";
 import {
 	DropdownMenu,
 	DropdownMenuContent,
@@ -10,18 +10,18 @@ import {
 	DropdownMenuLabel,
 	DropdownMenuSeparator,
 	DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+} from "#/components/ui/dropdown-menu";
 import {
 	SidebarMenu,
 	SidebarMenuButton,
 	SidebarMenuItem,
 	useSidebar,
-} from "@/components/ui/sidebar";
+} from "#/components/ui/sidebar";
 import {
 	currentUserQueryKey,
 	currentUserQueryOptions,
 	logout,
-} from "@/services/auth/authServices";
+} from "#/services/auth/authServices";
 
 function displayName(user: User) {
 	const name = [user.firstName, user.lastName].filter(Boolean).join(" ").trim();

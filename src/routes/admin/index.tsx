@@ -3,7 +3,7 @@ import { useQueryClient } from "@tanstack/react-query";
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import { useState } from "react";
 
-import { Button } from "@/components/ui/button";
+import { Button } from "#/components/ui/button";
 import {
 	Card,
 	CardContent,
@@ -11,11 +11,11 @@ import {
 	CardFooter,
 	CardHeader,
 	CardTitle,
-} from "@/components/ui/card";
-import { Checkbox } from "@/components/ui/checkbox";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { currentUserQueryKey, login } from "@/services/auth/authServices";
+} from "#/components/ui/card";
+import { Checkbox } from "#/components/ui/checkbox";
+import { Input } from "#/components/ui/input";
+import { Label } from "#/components/ui/label";
+import { currentUserQueryKey, login } from "#/services/auth/authServices";
 
 export const Route = createFileRoute("/admin/")({
 	component: AdminPage,

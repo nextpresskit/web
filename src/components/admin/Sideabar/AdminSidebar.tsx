@@ -10,8 +10,8 @@ import {
 	SidebarMenuButton,
 	SidebarMenuItem,
 	SidebarRail,
-} from "@/components/ui/sidebar";
-import { adminBrand, adminNav } from "@/config/adminSidebarNav";
+} from "#/components/ui/sidebar";
+import { adminBrand, adminNav } from "#/config/adminSidebarNav";
 import { NavMain } from "./NavMain";
 import { NavUser } from "./NavUser";
 

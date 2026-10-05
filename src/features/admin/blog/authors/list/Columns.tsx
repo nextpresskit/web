@@ -7,23 +7,23 @@ import {
 	MoreVertical,
 	PanelRightOpen,
 } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Checkbox } from "@/components/ui/checkbox";
+import { Button } from "#/components/ui/button";
+import { Checkbox } from "#/components/ui/checkbox";
 import {
 	DropdownMenu,
 	DropdownMenuContent,
 	DropdownMenuItem,
 	DropdownMenuSeparator,
 	DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+} from "#/components/ui/dropdown-menu";
 import {
 	Select,
 	SelectContent,
 	SelectItem,
 	SelectTrigger,
 	SelectValue,
-} from "@/components/ui/select";
-import type { BlogAuthorListItem } from "@/features/admin/blog/schema";
+} from "#/components/ui/select";
+import type { BlogAuthorListItem } from "#/features/admin/blog/schema";
 import { TableCellViewer } from "./TableCellViewer";
 
 export const BLOG_AUTHOR_STATUSES = ["Active", "Invited", "Suspended"] as const;

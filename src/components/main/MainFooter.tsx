@@ -1,8 +1,8 @@
 import { Link } from "@tanstack/react-router";
 import { Mail, Rss } from "lucide-react";
 
-import { Button } from "@/components/ui/button";
-import { Separator } from "@/components/ui/separator";
+import { Button } from "#/components/ui/button";
+import { Separator } from "#/components/ui/separator";
 
 const navItems: Array<{
 	to: "/" | "/about" | "/blog" | "/contacts";

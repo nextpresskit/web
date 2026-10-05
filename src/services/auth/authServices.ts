@@ -1,7 +1,7 @@
 import { queryOptions } from "@tanstack/react-query";
 import type { AxiosResponse } from "axios";
-import type { User } from "@/@types/user";
-import { clientAxios } from "@/lib/axios/clientAxios";
+import type { User } from "#/@types/user";
+import { clientAxios } from "#/lib/axios/clientAxios";
 
 export type LoginRequest = {
 	email: string;

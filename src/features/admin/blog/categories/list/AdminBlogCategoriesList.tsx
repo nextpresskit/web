@@ -1,5 +1,5 @@
-import categoriesData from "@/dummy_data/admin/blog_categoires_list.json";
-import { blogCategoryListItemSchema } from "@/features/admin/blog/schema";
+import categoriesData from "#/dummy_data/admin/blog_categoires_list.json";
+import { blogCategoryListItemSchema } from "#/features/admin/blog/schema";
 import { BlogCategoriesTableAdmin } from "./BlogCategoriesTableAdmin";
 
 const data = blogCategoryListItemSchema.array().parse(categoriesData);

@@ -1,9 +1,9 @@
 import { AlertCircle, Inbox, type LucideIcon, RotateCw } from "lucide-react";
 import type { ReactNode } from "react";
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
-import { Button } from "@/components/ui/button";
-import { Skeleton } from "@/components/ui/skeleton";
-import { getApiErrorMessage } from "@/lib/axios/clientAxios";
+import { Alert, AlertDescription, AlertTitle } from "#/components/ui/alert";
+import { Button } from "#/components/ui/button";
+import { Skeleton } from "#/components/ui/skeleton";
+import { getApiErrorMessage } from "#/lib/axios/clientAxios";
 
 /** Page heading shared by admin list screens. */
 export function AdminPageHeader({

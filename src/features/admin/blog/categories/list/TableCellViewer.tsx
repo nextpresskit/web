@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import { Button } from "@/components/ui/button";
+import { Button } from "#/components/ui/button";
 import {
 	Drawer,
 	DrawerClose,
@@ -9,13 +9,13 @@ import {
 	DrawerHeader,
 	DrawerTitle,
 	DrawerTrigger,
-} from "@/components/ui/drawer";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Separator } from "@/components/ui/separator";
-import { Textarea } from "@/components/ui/textarea";
-import type { BlogCategoryListItem } from "@/features/admin/blog/schema";
-import { useIsMobile } from "@/hooks/use-mobile";
+} from "#/components/ui/drawer";
+import { Input } from "#/components/ui/input";
+import { Label } from "#/components/ui/label";
+import { Separator } from "#/components/ui/separator";
+import { Textarea } from "#/components/ui/textarea";
+import type { BlogCategoryListItem } from "#/features/admin/blog/schema";
+import { useIsMobile } from "#/hooks/use-mobile";
 
 function formatDetailDate(iso: string): string {
 	try {

@@ -7,8 +7,8 @@ import {
 } from "lucide-react";
 import { useMemo } from "react";
 
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
+import { Badge } from "#/components/ui/badge";
+import { Button } from "#/components/ui/button";
 import {
 	Card,
 	CardContent,
@@ -16,9 +16,9 @@ import {
 	CardFooter,
 	CardHeader,
 	CardTitle,
-} from "@/components/ui/card";
-import { Separator } from "@/components/ui/separator";
-import { formatProductPrice, PRODUCTS, type Product } from "@/helpers/products";
+} from "#/components/ui/card";
+import { Separator } from "#/components/ui/separator";
+import { formatProductPrice, PRODUCTS, type Product } from "#/helpers/products";
 
 export const Route = createFileRoute("/(main)/_layout/shop/")({
 	component: ShopHomePage,

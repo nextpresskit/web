@@ -1,6 +1,6 @@
 import { Link, useLocation } from "@tanstack/react-router";
 import { Fragment } from "react";
-import { ThemeToggle } from "@/components/ThemeToggle";
+import { ThemeToggle } from "#/components/ThemeToggle";
 import {
 	Breadcrumb,
 	BreadcrumbItem,
@@ -8,10 +8,10 @@ import {
 	BreadcrumbList,
 	BreadcrumbPage,
 	BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb";
-import { Separator } from "@/components/ui/separator";
-import { SidebarTrigger } from "@/components/ui/sidebar";
-import { buildAdminBreadcrumbs } from "@/config/adminSidebarNav";
+} from "#/components/ui/breadcrumb";
+import { Separator } from "#/components/ui/separator";
+import { SidebarTrigger } from "#/components/ui/sidebar";
+import { buildAdminBreadcrumbs } from "#/config/adminSidebarNav";
 
 export function HeaderAdmin() {
 	const pathname = useLocation({ select: (location) => location.pathname });

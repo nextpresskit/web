@@ -1,8 +1,8 @@
 import { Link } from "@tanstack/react-router";
 
-import { ThemeToggle } from "@/components/ThemeToggle";
-import { Button } from "@/components/ui/button";
-import { Separator } from "@/components/ui/separator";
+import { ThemeToggle } from "#/components/ThemeToggle";
+import { Button } from "#/components/ui/button";
+import { Separator } from "#/components/ui/separator";
 
 const navItems: Array<{
 	to: "/" | "/about" | "/blog" | "/shop" | "/shop/products" | "/contacts";

@@ -6,24 +6,24 @@ import {
 	AccordionContent,
 	AccordionItem,
 	AccordionTrigger,
-} from "@/components/ui/accordion";
-import { Avatar, AvatarFallback } from "@/components/ui/avatar";
-import { Button } from "@/components/ui/button";
+} from "#/components/ui/accordion";
+import { Avatar, AvatarFallback } from "#/components/ui/avatar";
+import { Button } from "#/components/ui/button";
 import {
 	Card,
 	CardContent,
 	CardDescription,
 	CardHeader,
 	CardTitle,
-} from "@/components/ui/card";
-import { Separator } from "@/components/ui/separator";
+} from "#/components/ui/card";
+import { Separator } from "#/components/ui/separator";
 import {
 	ABOUT_FAQ_ITEMS,
 	ABOUT_INTRO,
 	FEATURES,
 	PROJECTS,
 	SITE_CONTACT,
-} from "@/content/site";
+} from "#/content/site";
 
 export const Route = createFileRoute("/(main)/_layout/about")({
 	component: About,

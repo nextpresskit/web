@@ -21,21 +21,21 @@ import {
 	Plus,
 } from "lucide-react";
 import * as React from "react";
-import { Button } from "@/components/ui/button";
+import { Button } from "#/components/ui/button";
 import {
 	DropdownMenu,
 	DropdownMenuCheckboxItem,
 	DropdownMenuContent,
 	DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import { Label } from "@/components/ui/label";
+} from "#/components/ui/dropdown-menu";
+import { Label } from "#/components/ui/label";
 import {
 	Select,
 	SelectContent,
 	SelectItem,
 	SelectTrigger,
 	SelectValue,
-} from "@/components/ui/select";
+} from "#/components/ui/select";
 import {
 	Table,
 	TableBody,
@@ -43,8 +43,8 @@ import {
 	TableHead,
 	TableHeader,
 	TableRow,
-} from "@/components/ui/table";
-import type { BlogAuthorListItem } from "@/features/admin/blog/schema";
+} from "#/components/ui/table";
+import type { BlogAuthorListItem } from "#/features/admin/blog/schema";
 import { createColumns } from "./Columns";
 
 export function BlogAuthorsTableAdmin({

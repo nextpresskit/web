@@ -1,6 +1,6 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import type { ReactNode } from "react";
-import { shouldRetryApiError } from "@/lib/axios/clientAxios";
+import { shouldRetryApiError } from "#/lib/axios/clientAxios";
 
 let context:
 	| {

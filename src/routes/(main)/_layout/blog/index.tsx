@@ -6,17 +6,17 @@ import {
 	RssIcon,
 } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
-import { Avatar, AvatarFallback } from "@/components/ui/avatar";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
+import { Avatar, AvatarFallback } from "#/components/ui/avatar";
+import { Badge } from "#/components/ui/badge";
+import { Button } from "#/components/ui/button";
 import {
 	Card,
 	CardContent,
 	CardDescription,
 	CardHeader,
 	CardTitle,
-} from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
+} from "#/components/ui/card";
+import { Input } from "#/components/ui/input";
 import {
 	Pagination,
 	PaginationContent,
@@ -25,8 +25,8 @@ import {
 	PaginationLink,
 	PaginationNext,
 	PaginationPrevious,
-} from "@/components/ui/pagination";
-import articlesFile from "@/dummy_data/articles.json";
+} from "#/components/ui/pagination";
+import articlesFile from "#/dummy_data/articles.json";
 
 const PAGE_SIZE = 5;
 

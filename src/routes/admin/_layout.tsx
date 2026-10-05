@@ -1,10 +1,10 @@
 import { createFileRoute, Outlet } from "@tanstack/react-router";
-import { FooterAdmin } from "@/components/admin/FooterAdmin";
-import { HeaderAdmin } from "@/components/admin/HeaderAdmin";
-import { NotFoundAdmin } from "@/components/admin/NotFoundAdmin";
-import { AdminSidebar } from "@/components/admin/Sideabar/AdminSidebar";
-import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
-import { Toaster } from "@/components/ui/sonner";
+import { FooterAdmin } from "#/components/admin/FooterAdmin";
+import { HeaderAdmin } from "#/components/admin/HeaderAdmin";
+import { NotFoundAdmin } from "#/components/admin/NotFoundAdmin";
+import { AdminSidebar } from "#/components/admin/Sideabar/AdminSidebar";
+import { SidebarInset, SidebarProvider } from "#/components/ui/sidebar";
+import { Toaster } from "#/components/ui/sonner";
 
 export const Route = createFileRoute("/admin/_layout")({
 	component: RouteComponent,

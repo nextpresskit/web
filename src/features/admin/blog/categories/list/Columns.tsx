@@ -7,16 +7,16 @@ import {
 	MoreVertical,
 	PanelRightOpen,
 } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Checkbox } from "@/components/ui/checkbox";
+import { Button } from "#/components/ui/button";
+import { Checkbox } from "#/components/ui/checkbox";
 import {
 	DropdownMenu,
 	DropdownMenuContent,
 	DropdownMenuItem,
 	DropdownMenuSeparator,
 	DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import type { BlogCategoryListItem } from "@/features/admin/blog/schema";
+} from "#/components/ui/dropdown-menu";
+import type { BlogCategoryListItem } from "#/features/admin/blog/schema";
 import { TableCellViewer } from "./TableCellViewer";
 
 function formatTableDate(iso: string | null): string {

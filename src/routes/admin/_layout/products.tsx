@@ -18,8 +18,8 @@ import {
 } from "lucide-react";
 import { useMemo, useState } from "react";
 import { toast } from "sonner";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
+import { Badge } from "#/components/ui/badge";
+import { Button } from "#/components/ui/button";
 import {
 	DropdownMenu,
 	DropdownMenuContent,
@@ -27,7 +27,7 @@ import {
 	DropdownMenuLabel,
 	DropdownMenuSeparator,
 	DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+} from "#/components/ui/dropdown-menu";
 import {
 	Table,
 	TableBody,
@@ -35,8 +35,8 @@ import {
 	TableHead,
 	TableHeader,
 	TableRow,
-} from "@/components/ui/table";
-import { formatProductPrice, PRODUCTS, type Product } from "@/helpers/products";
+} from "#/components/ui/table";
+import { formatProductPrice, PRODUCTS, type Product } from "#/helpers/products";
 
 export const Route = createFileRoute("/admin/_layout/products")({
 	component: RouteComponent,

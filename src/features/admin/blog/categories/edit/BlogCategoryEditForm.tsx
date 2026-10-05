@@ -2,29 +2,29 @@ import { useForm } from "@tanstack/react-form";
 import { useNavigate } from "@tanstack/react-router";
 import { Trash2 } from "lucide-react";
 import { useRef } from "react";
-import { Button } from "@/components/ui/button";
+import { Button } from "#/components/ui/button";
 import {
 	Card,
 	CardContent,
 	CardDescription,
 	CardHeader,
 	CardTitle,
-} from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
+} from "#/components/ui/card";
+import { Input } from "#/components/ui/input";
+import { Label } from "#/components/ui/label";
 import {
 	Select,
 	SelectContent,
 	SelectItem,
 	SelectTrigger,
 	SelectValue,
-} from "@/components/ui/select";
-import { Textarea } from "@/components/ui/textarea";
+} from "#/components/ui/select";
+import { Textarea } from "#/components/ui/textarea";
 import {
 	fieldError,
 	titleToSlug,
-} from "@/features/admin/blog/posts/edit/helpers";
-import type { BlogCategoryListItem } from "@/features/admin/blog/schema";
+} from "#/features/admin/blog/posts/edit/helpers";
+import type { BlogCategoryListItem } from "#/features/admin/blog/schema";
 
 const PARENT_NONE = "__none__";
 

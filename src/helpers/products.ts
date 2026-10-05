@@ -1,4 +1,4 @@
-import productsFile from "@/dummy_data/products.json";
+import productsFile from "#/dummy_data/products.json";
 
 export const PRODUCTS = productsFile.products;
 export type Product = (typeof productsFile.products)[number];

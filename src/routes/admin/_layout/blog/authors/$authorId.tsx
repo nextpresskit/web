@@ -1,7 +1,7 @@
 import { createFileRoute, notFound } from "@tanstack/react-router";
-import authorsData from "@/dummy_data/admin/blog_authors_list.json";
-import { BlogAuthorEditAdmin } from "@/features/admin/blog/authors/edit/BlogAuthorEditAdmin";
-import { blogAuthorListItemSchema } from "@/features/admin/blog/schema";
+import authorsData from "#/dummy_data/admin/blog_authors_list.json";
+import { BlogAuthorEditAdmin } from "#/features/admin/blog/authors/edit/BlogAuthorEditAdmin";
+import { blogAuthorListItemSchema } from "#/features/admin/blog/schema";
 
 export const Route = createFileRoute("/admin/_layout/blog/authors/$authorId")({
 	component: RouteComponent,

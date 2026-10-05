@@ -14,19 +14,19 @@ import {
 } from "lucide-react";
 import { useMemo } from "react";
 
-import { Avatar, AvatarFallback } from "@/components/ui/avatar";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
+import { Avatar, AvatarFallback } from "#/components/ui/avatar";
+import { Badge } from "#/components/ui/badge";
+import { Button } from "#/components/ui/button";
 import {
 	Card,
 	CardContent,
 	CardDescription,
 	CardHeader,
 	CardTitle,
-} from "@/components/ui/card";
-import { Separator } from "@/components/ui/separator";
-import { ABOUT_INTRO, FEATURES, HOURS, OFFICE, PROJECTS } from "@/content/site";
-import articlesFile from "@/dummy_data/articles.json";
+} from "#/components/ui/card";
+import { Separator } from "#/components/ui/separator";
+import { ABOUT_INTRO, FEATURES, HOURS, OFFICE, PROJECTS } from "#/content/site";
+import articlesFile from "#/dummy_data/articles.json";
 
 export const Route = createFileRoute("/(main)/_layout/")({
 	component: HomePage,
