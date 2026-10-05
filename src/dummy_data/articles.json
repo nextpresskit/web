@@ -3,20 +3,16 @@
 		{
 			"id": "1",
 			"slug": "introducing-next-press",
-			"title": "Introducing NextPress: a modern editorial stack",
+			"title": "Introducing NextPressKit: a modern editorial stack",
 			"excerpt": "Why we built a TanStack-first publishing experience and what problems it solves for content teams.",
 			"author": "Maya Chen",
 			"publishedAt": "2026-03-18T09:00:00.000Z",
 			"category": "Company",
 			"readTimeMinutes": 6,
-			"tags": [
-				"announcement",
-				"product",
-				"editorial"
-			],
-			"coverImage": "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=1600&q=80",
+			"tags": ["announcement", "product", "editorial"],
+			"coverImage": "/demo/blog/introducing-next-press.svg",
 			"authorRole": "Editorial lead",
-			"authorBio": "Runs the NextPress journal and cares about calm shipping cadences.",
+			"authorBio": "Runs the NextPressKit journal and cares about calm shipping cadences.",
 			"updatedAt": "2026-03-18T09:00:00.000Z",
 			"body": [
 				{
@@ -69,12 +65,8 @@
 			"publishedAt": "2026-03-15T14:30:00.000Z",
 			"category": "Engineering",
 			"readTimeMinutes": 9,
-			"tags": [
-				"tanstack",
-				"routing",
-				"react"
-			],
-			"coverImage": "https://images.unsplash.com/photo-1486312338210-ce31d21836b1?w=1600&q=80",
+			"tags": ["tanstack", "routing", "react"],
+			"coverImage": "/demo/blog/tanstack-router-file-routing.svg",
 			"authorRole": "Senior engineer",
 			"authorBio": "Focuses on routing, performance, and accessible UI patterns.",
 			"updatedAt": "2026-03-15T14:30:00.000Z",
@@ -129,12 +121,8 @@
 			"publishedAt": "2026-03-12T11:00:00.000Z",
 			"category": "Design",
 			"readTimeMinutes": 7,
-			"tags": [
-				"typography",
-				"ux",
-				"content"
-			],
-			"coverImage": "https://images.unsplash.com/photo-1522542550221-31fd19575a2d?w=1600&q=80",
+			"tags": ["typography", "ux", "content"],
+			"coverImage": "/demo/blog/designing-readable-long-form.svg",
 			"authorRole": "Design lead",
 			"authorBio": "Thinks in type scales, rhythm, and systems that survive handoff.",
 			"updatedAt": "2026-03-12T11:00:00.000Z",
@@ -189,12 +177,8 @@
 			"publishedAt": "2026-03-10T08:45:00.000Z",
 			"category": "Tutorials",
 			"readTimeMinutes": 5,
-			"tags": [
-				"accessibility",
-				"ux",
-				"patterns"
-			],
-			"coverImage": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1600&q=80",
+			"tags": ["accessibility", "ux", "patterns"],
+			"coverImage": "/demo/blog/pagination-ux-checklist.svg",
 			"authorRole": "Senior engineer",
 			"authorBio": "Focuses on routing, performance, and accessible UI patterns.",
 			"updatedAt": "2026-03-10T08:45:00.000Z",
@@ -249,12 +233,8 @@
 			"publishedAt": "2026-03-08T16:20:00.000Z",
 			"category": "Product",
 			"readTimeMinutes": 8,
-			"tags": [
-				"strategy",
-				"roadmap",
-				"pm"
-			],
-			"coverImage": "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=1600&q=80",
+			"tags": ["strategy", "roadmap", "pm"],
+			"coverImage": "/demo/blog/from-idea-to-roadmap.svg",
 			"authorRole": "Product strategy",
 			"authorBio": "Turns noisy signals into roadmaps teams can actually follow.",
 			"updatedAt": "2026-03-08T16:20:00.000Z",
@@ -309,12 +289,8 @@
 			"publishedAt": "2026-03-05T10:15:00.000Z",
 			"category": "Design",
 			"readTimeMinutes": 10,
-			"tags": [
-				"design-systems",
-				"css",
-				"tokens"
-			],
-			"coverImage": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1600&q=80",
+			"tags": ["design-systems", "css", "tokens"],
+			"coverImage": "/demo/blog/css-tokens-at-scale.svg",
 			"authorRole": "Design lead",
 			"authorBio": "Thinks in type scales, rhythm, and systems that survive handoff.",
 			"updatedAt": "2026-03-05T10:15:00.000Z",
@@ -369,12 +345,8 @@
 			"publishedAt": "2026-03-02T09:00:00.000Z",
 			"category": "Engineering",
 			"readTimeMinutes": 12,
-			"tags": [
-				"performance",
-				"react",
-				"ssr"
-			],
-			"coverImage": "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=1600&q=80",
+			"tags": ["performance", "react", "ssr"],
+			"coverImage": "/demo/blog/streaming-ssr-notes.svg",
 			"authorRole": "Senior engineer",
 			"authorBio": "Focuses on routing, performance, and accessible UI patterns.",
 			"updatedAt": "2026-03-02T09:00:00.000Z",
@@ -429,14 +401,10 @@
 			"publishedAt": "2026-02-27T13:00:00.000Z",
 			"category": "Product",
 			"readTimeMinutes": 4,
-			"tags": [
-				"communication",
-				"writing",
-				"launch"
-			],
-			"coverImage": "https://images.unsplash.com/photo-1486312338210-ce31d21836b1?w=1600&q=80",
+			"tags": ["communication", "writing", "launch"],
+			"coverImage": "/demo/blog/writing-better-release-notes.svg",
 			"authorRole": "Editorial lead",
-			"authorBio": "Runs the NextPress journal and cares about calm shipping cadences.",
+			"authorBio": "Runs the NextPressKit journal and cares about calm shipping cadences.",
 			"updatedAt": "2026-02-27T13:00:00.000Z",
 			"body": [
 				{
@@ -489,14 +457,10 @@
 			"publishedAt": "2026-02-22T09:30:00.000Z",
 			"category": "Tutorials",
 			"readTimeMinutes": 6,
-			"tags": [
-				"editorial",
-				"process",
-				"teams"
-			],
-			"coverImage": "https://images.unsplash.com/photo-1522542550221-31fd19575a2d?w=1600&q=80",
+			"tags": ["editorial", "process", "teams"],
+			"coverImage": "/demo/blog/editorial-calendar-basics.svg",
 			"authorRole": "Editorial lead",
-			"authorBio": "Runs the NextPress journal and cares about calm shipping cadences.",
+			"authorBio": "Runs the NextPressKit journal and cares about calm shipping cadences.",
 			"updatedAt": "2026-02-22T09:30:00.000Z",
 			"body": [
 				{
@@ -549,12 +513,8 @@
 			"publishedAt": "2026-02-18T11:45:00.000Z",
 			"category": "Company",
 			"readTimeMinutes": 7,
-			"tags": [
-				"open-source",
-				"culture",
-				"community"
-			],
-			"coverImage": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1600&q=80",
+			"tags": ["open-source", "culture", "community"],
+			"coverImage": "/demo/blog/open-source-sustainability.svg",
 			"authorRole": "Product strategy",
 			"authorBio": "Turns noisy signals into roadmaps teams can actually follow.",
 			"updatedAt": "2026-02-18T11:45:00.000Z",
@@ -609,12 +569,8 @@
 			"publishedAt": "2026-02-14T08:00:00.000Z",
 			"category": "Engineering",
 			"readTimeMinutes": 11,
-			"tags": [
-				"forms",
-				"accessibility",
-				"react"
-			],
-			"coverImage": "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=1600&q=80",
+			"tags": ["forms", "accessibility", "react"],
+			"coverImage": "/demo/blog/form-validation-patterns.svg",
 			"authorRole": "Senior engineer",
 			"authorBio": "Focuses on routing, performance, and accessible UI patterns.",
 			"updatedAt": "2026-02-14T08:00:00.000Z",
@@ -669,12 +625,8 @@
 			"publishedAt": "2026-02-10T15:10:00.000Z",
 			"category": "Design",
 			"readTimeMinutes": 5,
-			"tags": [
-				"ux-writing",
-				"empty-states",
-				"onboarding"
-			],
-			"coverImage": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1600&q=80",
+			"tags": ["ux-writing", "empty-states", "onboarding"],
+			"coverImage": "/demo/blog/microcopy-for-empty-states.svg",
 			"authorRole": "Design lead",
 			"authorBio": "Thinks in type scales, rhythm, and systems that survive handoff.",
 			"updatedAt": "2026-02-10T15:10:00.000Z",
@@ -729,12 +681,8 @@
 			"publishedAt": "2026-02-05T12:00:00.000Z",
 			"category": "Product",
 			"readTimeMinutes": 8,
-			"tags": [
-				"analytics",
-				"growth",
-				"content"
-			],
-			"coverImage": "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=1600&q=80",
+			"tags": ["analytics", "growth", "content"],
+			"coverImage": "/demo/blog/measuring-content-roi.svg",
 			"authorRole": "Product strategy",
 			"authorBio": "Turns noisy signals into roadmaps teams can actually follow.",
 			"updatedAt": "2026-02-05T12:00:00.000Z",
@@ -789,14 +737,10 @@
 			"publishedAt": "2026-02-01T09:20:00.000Z",
 			"category": "Tutorials",
 			"readTimeMinutes": 6,
-			"tags": [
-				"collaboration",
-				"workflow",
-				"editing"
-			],
-			"coverImage": "https://images.unsplash.com/photo-1486312338210-ce31d21836b1?w=1600&q=80",
+			"tags": ["collaboration", "workflow", "editing"],
+			"coverImage": "/demo/blog/draft-review-playbook.svg",
 			"authorRole": "Editorial lead",
-			"authorBio": "Runs the NextPress journal and cares about calm shipping cadences.",
+			"authorBio": "Runs the NextPressKit journal and cares about calm shipping cadences.",
 			"updatedAt": "2026-02-01T09:20:00.000Z",
 			"body": [
 				{
@@ -849,12 +793,8 @@
 			"publishedAt": "2026-01-28T10:40:00.000Z",
 			"category": "Engineering",
 			"readTimeMinutes": 9,
-			"tags": [
-				"security",
-				"web",
-				"checklist"
-			],
-			"coverImage": "https://images.unsplash.com/photo-1522542550221-31fd19575a2d?w=1600&q=80",
+			"tags": ["security", "web", "checklist"],
+			"coverImage": "/demo/blog/security-basics-for-frontends.svg",
 			"authorRole": "Senior engineer",
 			"authorBio": "Focuses on routing, performance, and accessible UI patterns.",
 			"updatedAt": "2026-01-28T10:40:00.000Z",
@@ -909,12 +849,8 @@
 			"publishedAt": "2026-01-22T14:00:00.000Z",
 			"category": "Design",
 			"readTimeMinutes": 6,
-			"tags": [
-				"brand",
-				"writing",
-				"voice"
-			],
-			"coverImage": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1600&q=80",
+			"tags": ["brand", "writing", "voice"],
+			"coverImage": "/demo/blog/brand-voice-and-tone.svg",
 			"authorRole": "Design lead",
 			"authorBio": "Thinks in type scales, rhythm, and systems that survive handoff.",
 			"updatedAt": "2026-01-22T14:00:00.000Z",
@@ -969,14 +905,10 @@
 			"publishedAt": "2026-01-15T11:30:00.000Z",
 			"category": "Company",
 			"readTimeMinutes": 7,
-			"tags": [
-				"retrospective",
-				"startup",
-				"community"
-			],
-			"coverImage": "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=1600&q=80",
+			"tags": ["retrospective", "startup", "community"],
+			"coverImage": "/demo/blog/year-one-retrospective.svg",
 			"authorRole": "Editorial lead",
-			"authorBio": "Runs the NextPress journal and cares about calm shipping cadences.",
+			"authorBio": "Runs the NextPressKit journal and cares about calm shipping cadences.",
 			"updatedAt": "2026-01-15T11:30:00.000Z",
 			"body": [
 				{
@@ -1029,12 +961,8 @@
 			"publishedAt": "2026-01-08T09:00:00.000Z",
 			"category": "Product",
 			"readTimeMinutes": 5,
-			"tags": [
-				"search",
-				"ia",
-				"blogs"
-			],
-			"coverImage": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1600&q=80",
+			"tags": ["search", "ia", "blogs"],
+			"coverImage": "/demo/blog/search-and-discovery-on-blogs.svg",
 			"authorRole": "Product strategy",
 			"authorBio": "Turns noisy signals into roadmaps teams can actually follow.",
 			"updatedAt": "2026-01-08T09:00:00.000Z",

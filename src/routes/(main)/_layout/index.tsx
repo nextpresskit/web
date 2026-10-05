@@ -77,7 +77,7 @@ function LatestGridTile({
 				className="absolute inset-0 size-full object-cover transition duration-500 group-hover:scale-[1.03]"
 			/>
 			<div
-				className="absolute inset-0 bg-linear-to-t from-background/95 via-background/40 to-transparent"
+				className="absolute inset-0 bg-linear-to-t from-black/90 via-black/60 to-black/15"
 				aria-hidden
 			/>
 			<div
@@ -435,7 +435,7 @@ function HomePage() {
 									</Link>
 								</Button>
 								<Button size="lg" variant="outline" asChild>
-									<Link to="/about">Why NextPress</Link>
+									<Link to="/about">Why NextPressKit</Link>
 								</Button>
 							</div>
 						</CardContent>
@@ -466,7 +466,7 @@ function HomePage() {
 						</div>
 						<Card className="border-border/80">
 							<CardHeader>
-								<CardTitle className="text-xl">NextPress Studio</CardTitle>
+								<CardTitle className="text-xl">NextPressKit Studio</CardTitle>
 								<CardDescription>
 									Direct lines, address, and weekly hours.
 								</CardDescription>

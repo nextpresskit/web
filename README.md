@@ -85,6 +85,23 @@ NextPressKit frontend is designed to work with the backend API project:
 - API responsibilities include authentication, content APIs, and admin-related backend operations.
 - This project can also be used separately with a different backend or mock/local APIs.
 
+### API configuration
+
+The app talks to the backend through `VITE_API_URL` (see `.env.example`):
+
+```bash
+cp .env.example .env.local   # then edit VITE_API_URL if needed
+```
+
+- In development, an unset `VITE_API_URL` falls back to `http://localhost:9090`, the backend's default `APP_PORT`.
+- Production builds have no fallback: admin screens show a clear "API URL is not configured" error until it is set.
+- Requests are sent with credentials because the backend's default auth mode uses HTTP-only cookies (`JWT_AUTH_SOURCE=cookie`). Add this app's origin to the backend's `CORS_ORIGINS` (for example `CORS_ORIGINS=http://127.0.0.1:3000,http://localhost:3000`).
+- Auth endpoints used: `POST /auth/login`, `POST /auth/logout`, `POST /auth/refresh`, `GET /auth/me`.
+
+### Demo images
+
+Sample blog covers and shop images in `public/demo/` are abstract SVGs drawn by `scripts/generate-demo-images.mjs` (no photos, no third-party assets; same licence as this repository). Regenerate with `bun scripts/generate-demo-images.mjs`.
+
 ## Internationalization
 
 This project includes ParaglideJS for localized routing and message formatting.

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-label="Abstract demo artwork">
+<defs>
+<linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#111827"/><stop offset="1" stop-color="#4c1d95"/></linearGradient>
+<filter id="b" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="50"/></filter>
+</defs>
+<rect width="1600" height="900" fill="url(#g)"/>
+<g filter="url(#b)"><rect x="-141" y="405.5" width="557.2" height="278.6" rx="46.4" fill="#4c1d95" opacity="0.5" transform="rotate(27 137.6 544.8)"/><circle cx="1403.5" cy="126" r="144.3" fill="#a78bfa" opacity="0.7"/><circle cx="927.3" cy="58.1" r="136.2" fill="#fbbf24" opacity="0.4"/><rect x="-167" y="-70.2" width="663.5" height="331.8" rx="55.3" fill="#4c1d95" opacity="0.7" transform="rotate(47 164.7 95.7)"/><circle cx="596.4" cy="461" r="206.1" fill="#a78bfa" opacity="0.5"/><circle cx="602.3" cy="175" r="270.9" fill="#fbbf24" opacity="0.6"/><rect x="1227.7" y="404.2" width="202.4" height="101.2" rx="16.9" fill="#4c1d95" opacity="0.4" transform="rotate(56 1328.9 454.8)"/></g>
+<g stroke="#ffffff" stroke-opacity="0.06" stroke-width="2"><line x1="114.3" y1="0" x2="-245.7" y2="900"/><line x1="228.6" y1="0" x2="-131.4" y2="900"/><line x1="342.9" y1="0" x2="-17.1" y2="900"/><line x1="457.1" y1="0" x2="97.1" y2="900"/><line x1="571.4" y1="0" x2="211.4" y2="900"/><line x1="685.7" y1="0" x2="325.7" y2="900"/><line x1="800" y1="0" x2="440" y2="900"/><line x1="914.3" y1="0" x2="554.3" y2="900"/><line x1="1028.6" y1="0" x2="668.6" y2="900"/><line x1="1142.9" y1="0" x2="782.9" y2="900"/><line x1="1257.1" y1="0" x2="897.1" y2="900"/><line x1="1371.4" y1="0" x2="1011.4" y2="900"/><line x1="1485.7" y1="0" x2="1125.7" y2="900"/></g>
+</svg>

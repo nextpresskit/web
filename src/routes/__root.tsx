@@ -39,6 +39,11 @@ export const Route = createRootRouteWithContext<MyRouterContext>()({
 			{
 				title: "NextPressKit",
 			},
+			{
+				name: "description",
+				content:
+					"NextPressKit: a TanStack Start publishing starter with a blog, shop demo and admin area for the NextPressKit Go backend.",
+			},
 		],
 		links: [
 			{

@@ -1,4 +1,5 @@
 import { useForm } from "@tanstack/react-form";
+import { useQueryClient } from "@tanstack/react-query";
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import { useState } from "react";
 
@@ -14,7 +15,7 @@ import {
 import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { login } from "@/services/auth/authServices";
+import { currentUserQueryKey, login } from "@/services/auth/authServices";
 
 export const Route = createFileRoute("/admin/")({
 	component: AdminPage,
@@ -23,6 +24,7 @@ export const Route = createFileRoute("/admin/")({
 function AdminPage() {
 	const [view, setView] = useState<"signin" | "forgot">("signin");
 	const navigate = useNavigate();
+	const queryClient = useQueryClient();
 
 	const handleSignIn = async (values: {
 		email: string;
@@ -36,7 +38,8 @@ function AdminPage() {
 			throw new Error("Sign in failed");
 		}
 
-		// await navigate({ to: "/admin/dashboard" });
+		await queryClient.invalidateQueries({ queryKey: currentUserQueryKey });
+		await navigate({ to: "/admin/dashboard" });
 	};
 
 	const signInForm = useForm({

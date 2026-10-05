@@ -9,7 +9,7 @@ import {
 } from "lucide-react";
 
 export const OFFICE = {
-	name: "NextPress Studio",
+	name: "NextPressKit Studio",
 	addressLines: ["1200 Market Street", "Suite 400", "San Francisco, CA 94102"],
 	phoneDisplay: "+1 (415) 555-0142",
 	phoneHref: "tel:+14155550142",
@@ -37,8 +37,8 @@ export const SITE_CONTACT = {
 
 export const ABOUT_INTRO = {
 	kicker: "About",
-	title: "NextPress: a modern publishing starter",
-	lede: "NextPress pairs TanStack Start with an editorial UI, a working blog, and sensible defaults for forms, i18n, and styling—so you spend time on story and product, not wiring fundamentals.",
+	title: "NextPressKit: a modern publishing starter",
+	lede: "NextPressKit pairs TanStack Start with an editorial UI, a working blog, and sensible defaults for forms, i18n, and styling—so you spend time on story and product, not wiring fundamentals.",
 } as const;
 
 export const FEATURES: ReadonlyArray<{
@@ -92,7 +92,7 @@ export const PROJECTS: ReadonlyArray<{
 	label: string;
 }> = [
 	{
-		name: "NextPress",
+		name: "NextPressKit",
 		description:
 			"This starter: a full-width editorial layout, blog, contacts, and admin scaffolding you can extend or strip down.",
 		href: OFFICE.github,
@@ -119,8 +119,8 @@ export const PROJECTS: ReadonlyArray<{
 
 export const ABOUT_FAQ_ITEMS: Array<{ q: string; a: string }> = [
 	{
-		q: "What is NextPress?",
-		a: "NextPress is an opinionated publishing starter for teams that want React, TanStack Start, and a real blog—without rebuilding routing, layout, and content plumbing from scratch.",
+		q: "What is NextPressKit?",
+		a: "NextPressKit is an opinionated publishing starter for teams that want React, TanStack Start, and a real blog—without rebuilding routing, layout, and content plumbing from scratch.",
 	},
 	{
 		q: "Can I use my own CMS or markdown?",

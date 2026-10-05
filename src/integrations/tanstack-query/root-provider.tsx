@@ -1,5 +1,6 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import type { ReactNode } from "react";
+import { shouldRetryApiError } from "@/lib/axios/clientAxios";
 
 let context:
 	| {
@@ -12,7 +13,11 @@ export function getContext() {
 		return context;
 	}
 
-	const queryClient = new QueryClient();
+	const queryClient = new QueryClient({
+		defaultOptions: {
+			queries: { retry: shouldRetryApiError },
+		},
+	});
 
 	context = {
 		queryClient,

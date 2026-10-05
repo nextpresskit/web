@@ -114,7 +114,7 @@ function ShopHomePage() {
 				/>
 				<div className="relative max-w-2xl space-y-6">
 					<Badge variant="outline" className="w-fit">
-						NextPress shop
+						NextPressKit shop
 					</Badge>
 					<h1 className="text-3xl font-semibold tracking-tight text-balance md:text-4xl">
 						Tools and pieces for calm, focused days.

@@ -1,5 +1,5 @@
-import { Link } from "@tanstack/react-router";
-import { ChevronRight, type LucideIcon } from "lucide-react";
+import { Link, useLocation } from "@tanstack/react-router";
+import { ChevronRight } from "lucide-react";
 import {
 	Collapsible,
 	CollapsibleContent,
@@ -15,34 +15,36 @@ import {
 	SidebarMenuSubButton,
 	SidebarMenuSubItem,
 } from "@/components/ui/sidebar";
+import type { AdminNavItem } from "@/config/adminSidebarNav";
 
-export function NavMain({
-	items,
-}: {
-	items: {
-		title: string;
-		url: string;
-		icon?: LucideIcon;
-		isActive?: boolean;
-		items?: {
-			title: string;
-			url: string;
-		}[];
-	}[];
-}) {
+function isActivePath(pathname: string, url: string) {
+	return pathname === url || pathname.startsWith(`${url}/`);
+}
+
+export function NavMain({ items }: { items: AdminNavItem[] }) {
+	const pathname = useLocation({ select: (location) => location.pathname });
+
 	return (
 		<SidebarGroup>
-			<SidebarGroupLabel>Platform</SidebarGroupLabel>
+			<SidebarGroupLabel>Manage</SidebarGroupLabel>
 			<SidebarMenu>
 				{items.map((item) => {
-					const hasSubItems = item.items && item.items.length > 0;
+					const subItems = item.items ?? [];
 
-					if (!hasSubItems) {
+					if (subItems.length === 0) {
+						const active = isActivePath(pathname, item.url);
 						return (
 							<SidebarMenuItem key={item.title}>
-								<SidebarMenuButton asChild tooltip={item.title}>
-									<Link to={item.url}>
-										{item.icon && <item.icon />}
+								<SidebarMenuButton
+									asChild
+									tooltip={item.title}
+									isActive={active}
+								>
+									<Link
+										to={item.url}
+										aria-current={active ? "page" : undefined}
+									>
+										<item.icon />
 										<span>{item.title}</span>
 									</Link>
 								</SidebarMenuButton>
@@ -50,32 +52,45 @@ export function NavMain({
 						);
 					}
 
+					const groupActive = subItems.some((sub) =>
+						isActivePath(pathname, sub.url),
+					);
+
 					return (
 						<Collapsible
 							key={item.title}
 							asChild
-							defaultOpen={item.isActive ?? false}
+							defaultOpen={groupActive}
 							className="group/collapsible"
 						>
 							<SidebarMenuItem>
 								<CollapsibleTrigger asChild>
-									<SidebarMenuButton tooltip={item.title}>
-										{item.icon && <item.icon />}
+									<SidebarMenuButton
+										tooltip={item.title}
+										isActive={groupActive}
+									>
+										<item.icon />
 										<span>{item.title}</span>
 										<ChevronRight className="ml-auto transition-transform duration-200 group-data-[state=open]/collapsible:rotate-90" />
 									</SidebarMenuButton>
 								</CollapsibleTrigger>
 								<CollapsibleContent>
 									<SidebarMenuSub>
-										{item.items?.map((subItem) => (
-											<SidebarMenuSubItem key={subItem.title}>
-												<SidebarMenuSubButton asChild>
-													<Link to={subItem.url}>
-														<span>{subItem.title}</span>
-													</Link>
-												</SidebarMenuSubButton>
-											</SidebarMenuSubItem>
-										))}
+										{subItems.map((subItem) => {
+											const active = isActivePath(pathname, subItem.url);
+											return (
+												<SidebarMenuSubItem key={subItem.title}>
+													<SidebarMenuSubButton asChild isActive={active}>
+														<Link
+															to={subItem.url}
+															aria-current={active ? "page" : undefined}
+														>
+															<span>{subItem.title}</span>
+														</Link>
+													</SidebarMenuSubButton>
+												</SidebarMenuSubItem>
+											);
+										})}
 									</SidebarMenuSub>
 								</CollapsibleContent>
 							</SidebarMenuItem>

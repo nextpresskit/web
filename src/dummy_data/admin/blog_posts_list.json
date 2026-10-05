@@ -64,12 +64,12 @@
 			"width": 1600,
 			"height": 900,
 			"focalPoint": { "x": 0.52, "y": 0.38 },
-			"credit": "NextPress Design",
+			"credit": "NextPressKit Design",
 			"license": "CC BY 4.0"
 		},
 		"gallery": [],
 		"seo": {
-			"title": "TanStack Router for editorial admin | NextPress Engineering",
+			"title": "TanStack Router for editorial admin | NextPressKit Engineering",
 			"description": "How we use TanStack Router for fast previews, stable URLs, and typed navigation in the CMS.",
 			"canonicalUrl": "https://nextpress.example/blog/tanstack-router-editorial-admin",
 			"robots": "index,follow",
@@ -495,7 +495,7 @@
 		},
 		"gallery": [],
 		"seo": {
-			"title": "Acme + NextPress: headless CMS at scale",
+			"title": "Acme + NextPressKit: headless CMS at scale",
 			"description": "How Acme runs multi-brand sites with previews, roles, and structured content.",
 			"canonicalUrl": "https://nextpress.example/customers/acme-headless-cms-case-study",
 			"robots": "index,follow",
@@ -994,12 +994,12 @@
 			"width": 1600,
 			"height": 900,
 			"focalPoint": { "x": 0.48, "y": 0.45 },
-			"credit": "NextPress Design",
+			"credit": "NextPressKit Design",
 			"license": "CC BY 4.0"
 		},
 		"gallery": [],
 		"seo": {
-			"title": "Streaming partial hydration: production metrics | NextPress",
+			"title": "Streaming partial hydration: production metrics | NextPressKit",
 			"description": "What changed in Core Web Vitals when we rolled out selective hydration.",
 			"canonicalUrl": "https://nextpress.example/blog/streaming-partial-hydration-production",
 			"robots": "index,follow",
@@ -1134,7 +1134,7 @@
 			"width": 1200,
 			"height": 800,
 			"focalPoint": { "x": 0.5, "y": 0.45 },
-			"credit": "NextPress Design",
+			"credit": "NextPressKit Design",
 			"license": "CC BY 4.0"
 		},
 		"gallery": [],
@@ -1386,12 +1386,12 @@
 			"width": 1400,
 			"height": 788,
 			"focalPoint": { "x": 0.5, "y": 0.5 },
-			"credit": "NextPress Design",
+			"credit": "NextPressKit Design",
 			"license": "Proprietary"
 		},
 		"gallery": [],
 		"seo": {
-			"title": "Five headless CMS API patterns | NextPress",
+			"title": "Five headless CMS API patterns | NextPressKit",
 			"description": "Common integration patterns distilled from customer support transcripts.",
 			"canonicalUrl": null,
 			"robots": "noindex,nofollow",
@@ -1525,7 +1525,7 @@
 		],
 		"seo": {
 			"title": "Photo essays: working with the Rights tab",
-			"description": "Step-by-step for credits, crops, and legal fields in NextPress.",
+			"description": "Step-by-step for credits, crops, and legal fields in NextPressKit.",
 			"canonicalUrl": "https://nextpress.example/blog/photo-essay-rights-tab-tutorial",
 			"robots": "index,follow",
 			"ogType": "article",
@@ -1636,7 +1636,11 @@
 			}
 		],
 		"tags": [
-			{ "id": "tag_incident", "name": "Incident response", "slug": "incident-response" },
+			{
+				"id": "tag_incident",
+				"name": "Incident response",
+				"slug": "incident-response"
+			},
 			{ "id": "tag_perf", "name": "Performance", "slug": "performance" }
 		],
 		"series": null,
@@ -1837,7 +1841,7 @@
 		"reviewer": "Daniel Park",
 		"slug": "northwind-assets-dam-sync-sponsored",
 		"uuid": "c5d6e7f8-a9b0-4123-cdef-789012345678",
-		"excerpt": "How teams wire asset libraries into NextPress with fewer manual exports. Sponsored by Northwind.",
+		"excerpt": "How teams wire asset libraries into NextPressKit with fewer manual exports. Sponsored by Northwind.",
 		"subtitle": "Sponsored",
 		"bodyMarkdownPreview": "*This article was produced with our partner Northwind Assets.*\n\n## The problem\n scattered folders...",
 		"format": "article",
@@ -1891,7 +1895,7 @@
 		},
 		"gallery": [],
 		"seo": {
-			"title": "DAM sync patterns (sponsored) | NextPress",
+			"title": "DAM sync patterns (sponsored) | NextPressKit",
 			"description": "Partner content on connecting digital asset management to your CMS.",
 			"canonicalUrl": "https://nextpress.example/blog/northwind-assets-dam-sync-sponsored",
 			"robots": "index,follow",
@@ -2019,7 +2023,7 @@
 			"width": 1280,
 			"height": 720,
 			"focalPoint": { "x": 0.55, "y": 0.42 },
-			"credit": "NextPress Design",
+			"credit": "NextPressKit Design",
 			"license": "CC BY 4.0"
 		},
 		"gallery": [],

@@ -428,7 +428,7 @@ function BlogPage() {
 						</CardHeader>
 						<CardContent className="space-y-3 text-muted-foreground text-sm leading-relaxed">
 							<p>
-								NextPress is a publishing playground: long-form articles,
+								NextPressKit is a publishing playground: long-form articles,
 								shorter updates, and tutorials for teams shipping content with
 								modern web tooling.
 							</p>

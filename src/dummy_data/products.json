@@ -13,19 +13,28 @@
 			"category": "Stationery",
 			"subcategory": "Notebooks",
 			"tags": ["notebook", "dot-grid", "lay-flat", "archival"],
-			"brand": "NextPress Goods",
-			"imageUrl": "https://picsum.photos/seed/nextpress-notebook/640/480",
+			"brand": "NextPressKit Goods",
+			"imageUrl": "/demo/shop/notebook.svg",
 			"images": [
-				"https://picsum.photos/seed/nextpress-notebook/640/480",
-				"https://picsum.photos/seed/nextpress-notebook-2/640/480",
-				"https://picsum.photos/seed/nextpress-notebook-3/640/480"
+				"/demo/shop/notebook.svg",
+				"/demo/shop/notebook-2.svg",
+				"/demo/shop/notebook-3.svg"
 			],
 			"inStock": true,
 			"stockQuantity": 142,
 			"lowStockThreshold": 20,
 			"weightGrams": 320,
-			"dimensionsMm": { "length": 210, "width": 148, "height": 12, "unit": "mm" },
-			"materials": ["FSC-certified paper", "linen spine", "vegetable-based ink"],
+			"dimensionsMm": {
+				"length": 210,
+				"width": 148,
+				"height": 12,
+				"unit": "mm"
+			},
+			"materials": [
+				"FSC-certified paper",
+				"linen spine",
+				"vegetable-based ink"
+			],
 			"colors": ["sage", "charcoal", "cream"],
 			"sizeOptions": ["A5"],
 			"countryOfOrigin": "Portugal",
@@ -50,7 +59,7 @@
 			},
 			"careInstructions": "Store flat; avoid prolonged direct sunlight.",
 			"publishedAt": "2024-02-14T10:00:00.000Z",
-			"seoTitle": "Studio Notebook — Dot Grid, Lay-Flat | NextPress",
+			"seoTitle": "Studio Notebook — Dot Grid, Lay-Flat | NextPressKit",
 			"seoDescription": "Archival dot-grid notebook with lay-flat binding. A5, 192 pages, FSC paper."
 		},
 		{
@@ -66,12 +75,9 @@
 			"category": "Apparel",
 			"subcategory": "Bags",
 			"tags": ["tote", "linen", "everyday", "unisex"],
-			"brand": "NextPress Goods",
-			"imageUrl": "https://picsum.photos/seed/nextpress-tote/640/480",
-			"images": [
-				"https://picsum.photos/seed/nextpress-tote/640/480",
-				"https://picsum.photos/seed/nextpress-tote-2/640/480"
-			],
+			"brand": "NextPressKit Goods",
+			"imageUrl": "/demo/shop/tote.svg",
+			"images": ["/demo/shop/tote.svg", "/demo/shop/tote-2.svg"],
 			"inStock": true,
 			"stockQuantity": 67,
 			"lowStockThreshold": 15,
@@ -102,7 +108,7 @@
 			},
 			"careInstructions": "Spot clean; cold hand wash if needed; line dry.",
 			"publishedAt": "2025-11-02T15:30:00.000Z",
-			"seoTitle": "Linen Tote Bag | NextPress",
+			"seoTitle": "Linen Tote Bag | NextPressKit",
 			"seoDescription": "Heavyweight linen tote with interior pockets. Made in Lithuania."
 		},
 		{
@@ -119,11 +125,8 @@
 			"subcategory": "Drinkware",
 			"tags": ["mug", "ceramic", "microwave-safe", "kitchen"],
 			"brand": "Kiln & Co.",
-			"imageUrl": "https://picsum.photos/seed/nextpress-mug/640/480",
-			"images": [
-				"https://picsum.photos/seed/nextpress-mug/640/480",
-				"https://picsum.photos/seed/nextpress-mug-2/640/480"
-			],
+			"imageUrl": "/demo/shop/mug.svg",
+			"images": ["/demo/shop/mug.svg", "/demo/shop/mug-2.svg"],
 			"inStock": true,
 			"stockQuantity": 210,
 			"lowStockThreshold": 25,
@@ -154,7 +157,7 @@
 			},
 			"careInstructions": "Dishwasher top rack; avoid thermal shock.",
 			"publishedAt": "2023-08-20T12:00:00.000Z",
-			"seoTitle": "Matte Ceramic Mug 350ml | NextPress",
+			"seoTitle": "Matte Ceramic Mug 350ml | NextPressKit",
 			"seoDescription": "Japanese stoneware mug with matte glaze. Microwave and dishwasher safe."
 		},
 		{
@@ -170,12 +173,9 @@
 			"category": "Prints",
 			"subcategory": "Screen Prints",
 			"tags": ["limited", "screen-print", "waves", "edition"],
-			"brand": "NextPress Editions",
-			"imageUrl": "https://picsum.photos/seed/nextpress-waves/640/480",
-			"images": [
-				"https://picsum.photos/seed/nextpress-waves/640/480",
-				"https://picsum.photos/seed/nextpress-waves-detail/640/480"
-			],
+			"brand": "NextPressKit Editions",
+			"imageUrl": "/demo/shop/waves.svg",
+			"images": ["/demo/shop/waves.svg", "/demo/shop/waves-detail.svg"],
 			"inStock": true,
 			"stockQuantity": 18,
 			"lowStockThreshold": 5,
@@ -211,7 +211,7 @@
 			},
 			"careInstructions": "Frame behind UV glass; avoid humidity above 60%.",
 			"publishedAt": "2024-06-01T09:00:00.000Z",
-			"seoTitle": "Waves — Limited Screen Print | NextPress Editions",
+			"seoTitle": "Waves — Limited Screen Print | NextPressKit Editions",
 			"seoDescription": "Limited edition of 150. Three-color screen print on cotton rag paper signed by the artist."
 		},
 		{
@@ -227,17 +227,19 @@
 			"category": "Stationery",
 			"subcategory": "Lettering",
 			"tags": ["wax-seal", "gift", "stationery", "brass"],
-			"brand": "NextPress Goods",
-			"imageUrl": "https://picsum.photos/seed/nextpress-wax/640/480",
-			"images": [
-				"https://picsum.photos/seed/nextpress-wax/640/480",
-				"https://picsum.photos/seed/nextpress-wax-open/640/480"
-			],
+			"brand": "NextPressKit Goods",
+			"imageUrl": "/demo/shop/wax.svg",
+			"images": ["/demo/shop/wax.svg", "/demo/shop/wax-open.svg"],
 			"inStock": true,
 			"stockQuantity": 53,
 			"lowStockThreshold": 10,
 			"weightGrams": 280,
-			"dimensionsMm": { "length": 160, "width": 120, "height": 45, "unit": "mm" },
+			"dimensionsMm": {
+				"length": 160,
+				"width": 120,
+				"height": 45,
+				"unit": "mm"
+			},
 			"materials": ["solid brass stamp", "blend wax", "recycled paper box"],
 			"colors": ["antique gold wax", "burgundy wax"],
 			"sizeOptions": ["one size"],
@@ -262,7 +264,7 @@
 			},
 			"careInstructions": "Clean stamp with soft cloth; store wax away from heat.",
 			"publishedAt": "2024-01-10T11:00:00.000Z",
-			"seoTitle": "Wax Seal Gift Set | NextPress",
+			"seoTitle": "Wax Seal Gift Set | NextPressKit",
 			"seoDescription": "Brass seal, two wax colors, and gift box. Perfect for letters and invitations."
 		},
 		{
@@ -278,12 +280,9 @@
 			"category": "Apparel",
 			"subcategory": "Tops",
 			"tags": ["tee", "organic", "unisex", "garment-dyed"],
-			"brand": "NextPress Goods",
-			"imageUrl": "https://picsum.photos/seed/nextpress-tee/640/480",
-			"images": [
-				"https://picsum.photos/seed/nextpress-tee/640/480",
-				"https://picsum.photos/seed/nextpress-tee-back/640/480"
-			],
+			"brand": "NextPressKit Goods",
+			"imageUrl": "/demo/shop/tee.svg",
+			"images": ["/demo/shop/tee.svg", "/demo/shop/tee-back.svg"],
 			"inStock": true,
 			"stockQuantity": 88,
 			"lowStockThreshold": 20,
@@ -314,7 +313,7 @@
 			},
 			"careInstructions": "Machine wash cold; tumble low; iron inside out.",
 			"publishedAt": "2025-09-15T14:00:00.000Z",
-			"seoTitle": "Organic Garment-Dyed Tee | NextPress",
+			"seoTitle": "Organic Garment-Dyed Tee | NextPressKit",
 			"seoDescription": "Relaxed unisex tee in organic cotton. Available XS–2XL."
 		},
 		{
@@ -330,12 +329,9 @@
 			"category": "Stationery",
 			"subcategory": "Calendars",
 			"tags": ["calendar", "2026", "oak", "desk"],
-			"brand": "NextPress Goods",
-			"imageUrl": "https://picsum.photos/seed/nextpress-calendar/640/480",
-			"images": [
-				"https://picsum.photos/seed/nextpress-calendar/640/480",
-				"https://picsum.photos/seed/nextpress-calendar-cards/640/480"
-			],
+			"brand": "NextPressKit Goods",
+			"imageUrl": "/demo/shop/calendar.svg",
+			"images": ["/demo/shop/calendar.svg", "/demo/shop/calendar-cards.svg"],
 			"inStock": true,
 			"stockQuantity": 95,
 			"lowStockThreshold": 12,
@@ -366,7 +362,7 @@
 			},
 			"careInstructions": "Wipe stand with dry cloth; keep cards dry.",
 			"publishedAt": "2025-10-01T08:00:00.000Z",
-			"seoTitle": "2026 Desk Calendar with Oak Stand | NextPress",
+			"seoTitle": "2026 Desk Calendar with Oak Stand | NextPressKit",
 			"seoDescription": "Minimal 2026 month-at-a-glance cards with a solid oak stand."
 		},
 		{
@@ -382,12 +378,9 @@
 			"category": "Prints",
 			"subcategory": "Giclée",
 			"tags": ["giclée", "open-edition", "abstract", "wall-art"],
-			"brand": "NextPress Editions",
-			"imageUrl": "https://picsum.photos/seed/nextpress-blocks/640/480",
-			"images": [
-				"https://picsum.photos/seed/nextpress-blocks/640/480",
-				"https://picsum.photos/seed/nextpress-blocks-frame/640/480"
-			],
+			"brand": "NextPressKit Editions",
+			"imageUrl": "/demo/shop/blocks.svg",
+			"images": ["/demo/shop/blocks.svg", "/demo/shop/blocks-frame.svg"],
 			"inStock": true,
 			"stockQuantity": 120,
 			"lowStockThreshold": 20,
@@ -418,7 +411,7 @@
 			},
 			"careInstructions": "Handle edges only; frame with acid-free mat.",
 			"publishedAt": "2023-11-22T16:00:00.000Z",
-			"seoTitle": "Blocks — Open Edition Giclée Print | NextPress",
+			"seoTitle": "Blocks — Open Edition Giclée Print | NextPressKit",
 			"seoDescription": "Bold geometric giclée on textured fine art paper. Open edition."
 		}
 	]

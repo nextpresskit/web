@@ -1,16 +1,19 @@
+import { Link } from "@tanstack/react-router";
+import { Newspaper } from "lucide-react";
 import type * as React from "react";
 import {
 	Sidebar,
 	SidebarContent,
 	SidebarFooter,
 	SidebarHeader,
+	SidebarMenu,
+	SidebarMenuButton,
+	SidebarMenuItem,
 	SidebarRail,
 } from "@/components/ui/sidebar";
-import { data as navData } from "../../../config/adminSidebarNav";
+import { adminBrand, adminNav } from "@/config/adminSidebarNav";
 import { NavMain } from "./NavMain";
-import { NavProjects } from "./NavProjects";
 import { NavUser } from "./NavUser";
-import { TeamSwitcher } from "./TeamSwitcher";
 
 export function AdminSidebar({
 	...props
@@ -18,14 +21,29 @@ export function AdminSidebar({
 	return (
 		<Sidebar collapsible="icon" {...props}>
 			<SidebarHeader>
-				<TeamSwitcher teams={navData.teams} />
+				<SidebarMenu>
+					<SidebarMenuItem>
+						<SidebarMenuButton size="lg" asChild tooltip={adminBrand.name}>
+							<Link to="/admin/dashboard">
+								<div className="flex aspect-square size-8 items-center justify-center rounded-lg bg-sidebar-primary text-sidebar-primary-foreground">
+									<Newspaper className="size-4" aria-hidden />
+								</div>
+								<div className="grid flex-1 text-left text-sm leading-tight">
+									<span className="truncate font-semibold">
+										{adminBrand.name}
+									</span>
+									<span className="truncate text-xs">{adminBrand.tagline}</span>
+								</div>
+							</Link>
+						</SidebarMenuButton>
+					</SidebarMenuItem>
+				</SidebarMenu>
 			</SidebarHeader>
 			<SidebarContent>
-				<NavMain items={navData.navMain} />
-				<NavProjects projects={navData.projects} />
+				<NavMain items={adminNav} />
 			</SidebarContent>
 			<SidebarFooter>
-				<NavUser user={navData.user} />
+				<NavUser />
 			</SidebarFooter>
 			<SidebarRail />
 		</Sidebar>

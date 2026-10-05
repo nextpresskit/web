@@ -106,16 +106,17 @@ function About() {
 						</Avatar>
 						<div className="min-w-0 space-y-3">
 							<div>
-								<p className="font-semibold text-lg">NextPress maintainer</p>
+								<p className="font-semibold text-lg">NextPressKit maintainer</p>
 								<p className="text-muted-foreground text-sm">
 									Product engineer · Design systems · Editorial tooling
 								</p>
 							</div>
 							<p className="text-muted-foreground leading-relaxed">
 								I build interfaces and content pipelines for teams that care
-								about clarity and performance. NextPress started as a repeatable
-								base for launch sites, magazines, and changelog-driven products—
-								with room to grow into something uniquely yours.
+								about clarity and performance. NextPressKit started as a
+								repeatable base for launch sites, magazines, and
+								changelog-driven products— with room to grow into something
+								uniquely yours.
 							</p>
 							<div className="flex flex-wrap gap-2 pt-1">
 								<Button variant="outline" size="sm" asChild>
@@ -223,9 +224,9 @@ function About() {
 							Get in touch
 						</h2>
 						<p className="text-muted-foreground leading-relaxed">
-							Questions about NextPress, partnerships, or a custom build? Reach
-							out directly or visit the contact page for hours, location, and
-							the full message form.
+							Questions about NextPressKit, partnerships, or a custom build?
+							Reach out directly or visit the contact page for hours, location,
+							and the full message form.
 						</p>
 						<Separator className="my-4 max-w-md" />
 						<ul className="space-y-2 text-sm">
