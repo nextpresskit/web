@@ -26,12 +26,16 @@ The goal of this project is to give developers a strong starting point they can 
 
 ## Getting Started
 
+This repository uses **[Bun](https://bun.com/) only** (lockfile `bun.lock`; CI pins Bun 1.3.9). Do not use npm, pnpm or yarn here: they would create a second lockfile. Install-script permissions live in `package.json` `trustedDependencies` (esbuild, lightningcss). Dependencies are pinned to exact versions or caret ranges, never `latest`.
+
 Install dependencies and run the app locally:
 
 ```bash
-bun install
+bun install --frozen-lockfile
 bun dev
 ```
+
+Imports from `src/` use the `#/` alias only (`package.json` `imports` and `tsconfig.json` `paths`), for example `import { Button } from "#/components/ui/button"`.
 
 ## Create Certificates - One time setup
 
@@ -97,6 +101,8 @@ cp .env.example .env.local   # then edit VITE_API_URL if needed
 - Production builds have no fallback: admin screens show a clear "API URL is not configured" error until it is set.
 - Requests are sent with credentials because the backend's default auth mode uses HTTP-only cookies (`JWT_AUTH_SOURCE=cookie`). Add this app's origin to the backend's `CORS_ORIGINS` (for example `CORS_ORIGINS=http://127.0.0.1:3000,http://localhost:3000`).
 - Auth endpoints used: `POST /auth/login`, `POST /auth/logout`, `POST /auth/refresh`, `GET /auth/me`.
+- Admin endpoints used: `GET /admin/posts` (+ `GET|PUT|DELETE /admin/posts/{id}`, `PUT /admin/posts/{id}/seo`) and `GET /admin/users` (backend permission `users:read`, granted to the `admin` role by the backend seed). Backend response shapes are mapped to the admin view models in one place, `src/services/admin/adapters.ts`.
+- `VITE_SITE_URL` is this app's public origin; share tags such as `og:image` are built as absolute URLs from it (development default `http://localhost:3000`; production omits `og:image` until it is set).
 
 ### Demo images
 
