@@ -5,7 +5,8 @@ import { BlogCategoriesTableAdmin } from "./BlogCategoriesTableAdmin";
 const data = blogCategoryListItemSchema.array().parse(categoriesData);
 
 /** TanStack Router `Link` `to` for opening the category editor from this list. */
-export const adminBlogCategoryEditTo = "/admin/blog/categories/$categoryId" as const;
+export const adminBlogCategoryEditTo =
+	"/admin/blog/categories/$categoryId" as const;
 
 export const AdminBlogCategoriesList = () => {
 	return (

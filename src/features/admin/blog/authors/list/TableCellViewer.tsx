@@ -97,10 +97,7 @@ export function TableCellViewer({
 					<form className="flex flex-col gap-4">
 						<div className="flex flex-col gap-3">
 							<Label htmlFor="author-display-name">Display name</Label>
-							<Input
-								id="author-display-name"
-								defaultValue={item.displayName}
-							/>
+							<Input id="author-display-name" defaultValue={item.displayName} />
 						</div>
 						<div className="flex flex-col gap-3">
 							<Label htmlFor="author-email">Email</Label>

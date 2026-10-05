@@ -59,9 +59,7 @@ export function BlogAuthorsTableAdmin({
 			createColumns({
 				onStatusChange: (authorId, status) => {
 					setData((prev) =>
-						prev.map((row) =>
-							row.id === authorId ? { ...row, status } : row,
-						),
+						prev.map((row) => (row.id === authorId ? { ...row, status } : row)),
 					);
 				},
 			}),
