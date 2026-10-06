@@ -38,6 +38,9 @@ jobs:
       - name: Biome check
         run: bun run check
 
+      - name: Compile translations (src/paraglide is generated, not committed)
+        run: bun run i18n:compile
+
       - name: Typecheck
         run: bunx tsc --noEmit
 
